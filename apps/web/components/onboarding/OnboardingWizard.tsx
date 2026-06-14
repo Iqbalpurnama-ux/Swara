@@ -37,10 +37,10 @@ export function OnboardingWizard() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="bg-white rounded-[2rem] w-full max-w-[500px] overflow-hidden flex flex-col relative z-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+      <div className="bg-white dark:bg-slate-900 rounded-[2rem] w-full max-w-[500px] overflow-hidden flex flex-col relative z-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] border border-gray-100 dark:border-slate-800">
         
         {/* Step Indicator */}
-        <div className="flex justify-center gap-2 p-8 bg-white border-b border-gray-50">
+        <div className="flex justify-center gap-2 p-8 bg-white dark:bg-slate-900 border-b border-gray-50 dark:border-slate-800">
           {Array.from({ length: totalSteps }).map((_, i) => (
             <div
               key={i}
@@ -56,23 +56,23 @@ export function OnboardingWizard() {
               <div className="mb-8 drop-shadow-md">
                 <Image src="/logo.png" alt="Swara Logo" width={64} height={64} className="rounded-2xl" />
               </div>
-              <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-4">Selamat Datang di Swara</h1>
-              <p className="text-gray-500 text-lg leading-relaxed font-medium">
-                Platform aksesibilitas untuk komunikasi tanpa batas melalui fitur <span className="font-semibold text-blue-600">Speech-to-Text</span> dan <span className="font-semibold text-sky-600">Text-to-Speech</span>.
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">Selamat Datang di Swara</h1>
+              <p className="text-gray-500 dark:text-slate-400 text-lg leading-relaxed font-medium">
+                Platform aksesibilitas untuk komunikasi tanpa batas melalui fitur <span className="font-semibold text-blue-600 dark:text-blue-400">Speech-to-Text</span> dan <span className="font-semibold text-sky-600 dark:text-sky-400">Text-to-Speech</span>.
               </p>
             </div>
           )}
 
           {step === 2 && (
             <div className="animate-in fade-in slide-in-from-right-8 duration-500 text-center">
-              <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Mic className="w-8 h-8 text-blue-600" />
+              <div className="w-20 h-20 bg-blue-50 dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Mic className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-4">Akses Mikrofon</h2>
-              <p className="text-gray-500 font-medium mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">Akses Mikrofon</h2>
+              <p className="text-gray-500 dark:text-slate-400 font-medium mb-8">
                 Kami membutuhkan akses mikrofon Anda untuk:
               </p>
-              <ul className="text-left space-y-4 bg-gray-50/50 p-6 rounded-2xl text-gray-700 border border-gray-100 font-medium">
+              <ul className="text-left space-y-4 bg-gray-50/50 dark:bg-slate-800/50 p-6 rounded-2xl text-gray-700 dark:text-slate-300 border border-gray-100 dark:border-slate-700 font-medium">
                 <li className="flex items-center gap-4"><CheckCircle2 className="w-5 h-5 text-blue-500" /> Mengubah suara menjadi teks</li>
                 <li className="flex items-center gap-4"><CheckCircle2 className="w-5 h-5 text-blue-500" /> Proses transkripsi real-time</li>
                 <li className="flex items-center gap-4"><CheckCircle2 className="w-5 h-5 text-blue-500" /> Mendukung fitur aksesibilitas penuh</li>
@@ -82,27 +82,27 @@ export function OnboardingWizard() {
 
           {step === 3 && (
             <div className="animate-in fade-in slide-in-from-right-8 duration-500">
-              <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-8 text-center">Gesture Assistant</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight mb-8 text-center">Gesture Assistant</h2>
               <div className="space-y-4">
-                <div className="flex items-center gap-5 p-5 border border-gray-100 rounded-2xl bg-white shadow-sm transition-all hover:border-blue-200">
-                  <div className="bg-blue-50 p-3 rounded-xl"><MoveLeft className="w-6 h-6 text-blue-600" /></div>
+                <div className="flex items-center gap-5 p-5 border border-gray-100 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm transition-all hover:border-blue-200 dark:hover:border-blue-800">
+                  <div className="bg-blue-50 dark:bg-slate-800 p-3 rounded-xl"><MoveLeft className="w-6 h-6 text-blue-600 dark:text-blue-400" /></div>
                   <div>
-                    <h3 className="font-bold text-gray-900 text-[15px]">Swipe Kiri</h3>
-                    <p className="text-gray-500 text-sm font-medium">Hapus Transkrip</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-[15px]">Swipe Kiri</h3>
+                    <p className="text-gray-500 dark:text-slate-400 text-sm font-medium">Hapus Transkrip</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-5 p-5 border border-gray-100 rounded-2xl bg-white shadow-sm transition-all hover:border-blue-200">
-                  <div className="bg-blue-50 p-3 rounded-xl"><MoveRight className="w-6 h-6 text-blue-600" /></div>
+                <div className="flex items-center gap-5 p-5 border border-gray-100 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm transition-all hover:border-blue-200 dark:hover:border-blue-800">
+                  <div className="bg-blue-50 dark:bg-slate-800 p-3 rounded-xl"><MoveRight className="w-6 h-6 text-blue-600 dark:text-blue-400" /></div>
                   <div>
-                    <h3 className="font-bold text-gray-900 text-[15px]">Swipe Kanan</h3>
-                    <p className="text-gray-500 text-sm font-medium">Simpan Transkrip</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-[15px]">Swipe Kanan</h3>
+                    <p className="text-gray-500 dark:text-slate-400 text-sm font-medium">Simpan Transkrip</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-5 p-5 border border-gray-100 rounded-2xl bg-white shadow-sm transition-all hover:border-blue-200">
-                  <div className="bg-blue-50 p-3 rounded-xl"><MousePointerClick className="w-6 h-6 text-blue-600" /></div>
+                <div className="flex items-center gap-5 p-5 border border-gray-100 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm transition-all hover:border-blue-200 dark:hover:border-blue-800">
+                  <div className="bg-blue-50 dark:bg-slate-800 p-3 rounded-xl"><MousePointerClick className="w-6 h-6 text-blue-600 dark:text-blue-400" /></div>
                   <div>
-                    <h3 className="font-bold text-gray-900 text-[15px]">Double Tap</h3>
-                    <p className="text-gray-500 text-sm font-medium">Mulai Rekam</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-[15px]">Double Tap</h3>
+                    <p className="text-gray-500 dark:text-slate-400 text-sm font-medium">Mulai Rekam</p>
                   </div>
                 </div>
               </div>
@@ -111,17 +111,17 @@ export function OnboardingWizard() {
 
           {step === 4 && (
             <div className="animate-in fade-in slide-in-from-right-8 duration-500 text-center">
-              <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Globe2 className="w-8 h-8 text-blue-600" />
+              <div className="w-20 h-20 bg-blue-50 dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Globe2 className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-4">Bahasa Utama</h2>
-              <p className="text-gray-500 font-medium mb-8">Pilih bahasa yang paling sering Anda gunakan.</p>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">Bahasa Utama</h2>
+              <p className="text-gray-500 dark:text-slate-400 font-medium mb-8">Pilih bahasa yang paling sering Anda gunakan.</p>
               
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
                 aria-label="Pilih bahasa default Anda"
-                className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-[15px] text-gray-900 font-semibold outline-none appearance-none transition-all cursor-pointer shadow-sm"
+                className="w-full h-14 px-5 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-blue-600 dark:focus:border-blue-500 focus:ring-1 focus:ring-blue-600 text-[15px] text-gray-900 dark:text-white font-semibold outline-none appearance-none transition-all cursor-pointer shadow-sm"
               >
                 <option value="id-ID">🇮🇩 Bahasa Indonesia</option>
                 <option value="en-US">🇬🇧 English (US)</option>
@@ -133,11 +133,11 @@ export function OnboardingWizard() {
         </div>
 
         {/* Footer Controls */}
-        <div className="p-8 border-t border-gray-100 bg-gray-50 flex items-center justify-between">
+        <div className="p-8 border-t border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/50 flex items-center justify-between">
           <button
             onClick={handleBack}
             disabled={step === 1}
-            className="h-12 px-6 rounded-xl font-semibold text-gray-500 hover:text-gray-900 hover:bg-gray-200 disabled:opacity-0 transition-all text-[15px]"
+            className="h-12 px-6 rounded-xl font-semibold text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-slate-800 disabled:opacity-0 transition-all text-[15px]"
           >
             Kembali
           </button>

@@ -8,6 +8,7 @@ import {
   ArrowRight, Sparkles, LayoutDashboard, ChevronDown, Quote,
   MonitorSmartphone, Zap, ShieldCheck
 } from 'lucide-react';
+import Particles from '../components/ui/Particles';
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
@@ -56,6 +57,23 @@ export default function Home() {
       <div className="absolute top-0 inset-x-0 h-screen overflow-hidden pointer-events-none -z-10">
         <div className="absolute -top-[20%] -left-[10%] w-[800px] h-[800px] rounded-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-300/30 via-transparent to-transparent blur-[100px]"></div>
         <div className="absolute top-[10%] -right-[20%] w-[1000px] h-[1000px] rounded-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-200/40 via-transparent to-transparent blur-[120px]"></div>
+      </div>
+
+      {/* Interactive Particles Background for Hero */}
+      <div className="absolute top-0 inset-x-0 h-screen overflow-hidden pointer-events-auto z-0">
+        <Particles
+          particleColors={["#2563EB", "#3B82F6", "#8B5CF6", "#BC4800", "#EFF6FF"]}
+          particleCount={450}
+          particleSpread={15}
+          speed={0.08}
+          particleBaseSize={110}
+          moveParticlesOnHover={true}
+          particleHoverFactor={3}
+          alphaParticles={true}
+          sizeRandomness={1.8}
+          cameraDistance={25}
+          disableRotation={false}
+        />
       </div>
 
       {/* Ultra-Premium Navbar */}
@@ -373,59 +391,88 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             
             {/* Free Plan */}
-            <div className="bg-white border border-slate-200 rounded-[2.5rem] p-10 md:p-12 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-300 relative group">
-              <div className="text-[13px] font-extrabold text-slate-400 tracking-widest uppercase mb-4">Paket Dasar</div>
-              <div className="text-[56px] font-extrabold text-slate-900 tracking-tighter leading-none mb-2">
-                Gratis
+            <div className="bg-[#E2E8F0]/30 border border-slate-200 rounded-[2.5rem] p-8 md:p-10 hover:border-slate-300 hover:shadow-xl transition-all duration-300 relative group h-full flex flex-col">
+              <div className="text-[13px] font-extrabold text-slate-500 tracking-widest uppercase mb-4">Paket Regular</div>
+              <div className="text-[48px] font-extrabold text-slate-800 tracking-tighter leading-none mb-4">
+                GRATIS
               </div>
-              <p className="text-[15px] text-slate-500 mb-8 pb-8 border-b border-slate-100 font-medium leading-relaxed">
-                Seluruh fitur esensial yang Anda butuhkan untuk komunikasi sehari-hari, tersedia secara gratis.
+              <p className="text-[15px] text-slate-600 mb-8 pb-8 border-b border-slate-200 font-medium leading-relaxed">
+                Seluruh fitur esensial yang Anda butuhkan untuk komunikasi sehari-hari.
               </p>
               
-              <div className="flex flex-col gap-4 mb-10">
-                {['Penggunaan 15 menit per sesi', 'Pilihan 3 jenis suara natural', 'Akses terjemahan dasar', 'Riwayat tersimpan aman di perangkat', 'Bebas dari gangguan iklan'].map((feat, i) => (
-                  <div key={i} className="flex items-start gap-4 text-[15px] font-bold text-slate-700">
-                    <div className="w-5 h-5 rounded-full bg-slate-100 group-hover:bg-blue-50 text-slate-400 group-hover:text-blue-600 flex items-center justify-center shrink-0 mt-0.5 transition-colors"><Check className="w-3 h-3" /></div>
+              <div className="flex flex-col gap-4 mb-10 flex-1">
+                {['Maksimal 30 menit per sesi', 'Batas 1.000 karakter translasi/hari', '3 Preset suara natural', 'Riwayat disimpan lokal', '100% bebas iklan'].map((feat, i) => (
+                  <div key={i} className="flex items-start gap-4 text-[14px] font-bold text-slate-700">
+                    <div className="w-5 h-5 rounded-full bg-white text-slate-500 flex items-center justify-center shrink-0 mt-0.5 shadow-sm"><Check className="w-3 h-3" /></div>
                     {feat}
                   </div>
                 ))}
               </div>
               
-              <Link href="/register" className="block text-center w-full py-4.5 rounded-[1.25rem] text-[16px] font-bold border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-colors">
+              <Link href="/register" className="block text-center w-full py-4 rounded-[1.25rem] text-[15px] font-bold border-2 border-slate-300 text-[#334155] bg-white hover:bg-slate-50 transition-colors mt-auto">
                 Mulai Gunakan Gratis
               </Link>
             </div>
             
-            {/* Premium Plan */}
-            <div className="bg-white border-2 border-blue-600 rounded-[2.5rem] p-10 md:p-12 relative shadow-2xl shadow-blue-900/10 md:scale-105 z-10 overflow-hidden">
+            {/* Premium Plan - Bulanan */}
+            <div className="bg-white border-2 border-blue-600 rounded-[2.5rem] p-10 md:p-12 relative shadow-2xl shadow-blue-900/10 md:scale-105 z-10 overflow-hidden h-full flex flex-col">
               <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100/50 rounded-full blur-[80px]"></div>
               
               <div className="absolute top-6 right-6 bg-blue-50 border border-blue-100 text-blue-700 text-[11px] font-bold px-4 py-1.5 rounded-full tracking-widest uppercase shadow-sm">
-                Pilihan Profesional
+                Pilihan Populer
               </div>
               
-              <div className="text-[13px] font-extrabold text-blue-600 tracking-widest uppercase mb-4">Paket Premium</div>
-              <div className="text-[56px] font-extrabold text-slate-900 tracking-tighter leading-none mb-2 flex items-end gap-2 relative z-10">
-                Rp 49<span className="text-[32px] mb-1">rb</span><span className="text-[16px] font-bold text-slate-500 mb-2.5">/bulan</span>
+              <div className="text-[13px] font-extrabold text-blue-600 tracking-widest uppercase mb-4">Premium Bulanan</div>
+              <div className="text-[48px] font-extrabold text-slate-900 tracking-tighter leading-none mb-2 flex items-end gap-2 relative z-10">
+                Rp 49<span className="text-[28px] mb-1">rb</span><span className="text-[14px] font-bold text-slate-500 mb-2">/bln</span>
               </div>
               <p className="text-[15px] text-slate-500 mb-8 pb-8 border-b border-slate-100 font-medium leading-relaxed relative z-10">
-                Pilihan terbaik untuk mendukung produktivitas penuh saat belajar di kampus atau rapat di kantor.
+                Pilihan terbaik untuk mendukung produktivitas penuh tanpa batasan.
               </p>
               
-              <div className="flex flex-col gap-4 mb-10 relative z-10">
-                {['Durasi percakapan tanpa batas waktu', 'Akses ke seluruh suara premium', 'Terjemahan bahasa asing tanpa batas', 'Ringkasan otomatis oleh sistem', 'Identifikasi pembicara (Banyak orang)', 'Sinkronisasi antar perangkat'].map((feat, i) => (
-                  <div key={i} className="flex items-start gap-4 text-[15px] font-bold text-slate-800">
+              <div className="flex flex-col gap-4 mb-10 flex-1 relative z-10">
+                {['Unlimited durasi sesi STT', 'Unlimited Real-time Translation', 'SmartNote AI Summary', 'Premium Natural Voices (10+)', 'Multi-Speaker Recognition', 'Cloud Backup & Sync'].map((feat, i) => (
+                  <div key={i} className="flex items-start gap-4 text-[14px] font-bold text-slate-800">
                     <div className="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-md shadow-blue-600/20"><Check className="w-3 h-3" /></div>
                     {feat}
                   </div>
                 ))}
               </div>
               
-              <Link href="/register" className="block text-center w-full py-4.5 rounded-[1.25rem] text-[16px] font-bold bg-blue-600 hover:bg-blue-700 text-white transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] relative z-10 hover:-translate-y-0.5">
-                Berlangganan Premium
+              <Link href="/register" className="block text-center w-full py-4 rounded-[1.25rem] text-[15px] font-bold bg-[#2563EB] hover:bg-blue-700 text-white transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:-translate-y-0.5 mt-auto relative z-10">
+                Berlangganan Bulanan
+              </Link>
+            </div>
+
+            {/* Premium Plan - Tahunan */}
+            <div className="bg-[#FFF8F3] border border-[#BC4800]/20 rounded-[2.5rem] p-8 md:p-10 hover:border-[#BC4800]/40 hover:shadow-xl transition-all duration-300 relative overflow-hidden h-full flex flex-col">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-orange-100/50 rounded-full blur-[80px]"></div>
+              
+              <div className="text-[13px] font-extrabold text-[#BC4800] tracking-widest uppercase mb-4">Premium Tahunan</div>
+              <div className="text-[48px] font-extrabold text-slate-900 tracking-tighter leading-none mb-2 flex items-end gap-2 relative z-10">
+                Rp 399<span className="text-[28px] mb-1">rb</span><span className="text-[14px] font-bold text-slate-500 mb-2">/thn</span>
+              </div>
+              <p className="text-[15px] text-slate-600 mb-8 pb-8 border-b border-[#BC4800]/10 font-medium leading-relaxed relative z-10">
+                Pilihan paling hemat untuk komitmen jangka panjang. Semua fitur Bulanan!
+              </p>
+              
+              <div className="flex flex-col gap-4 mb-10 flex-1 relative z-10">
+                <div className="p-3 bg-[#BC4800]/10 rounded-xl border border-[#BC4800]/20 flex items-center justify-center mb-2">
+                  <span className="text-[13px] font-extrabold text-[#BC4800] uppercase tracking-wider">🔥 Hemat 32%</span>
+                </div>
+                {['Semua fitur Premium Bulanan', 'Priority Email & In-App Support', 'Akses beta fitur baru lebih dulu'].map((feat, i) => (
+                  <div key={i} className="flex items-start gap-4 text-[14px] font-bold text-slate-800">
+                    <div className="w-5 h-5 rounded-full bg-[#BC4800] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-md"><Check className="w-3 h-3" /></div>
+                    {feat}
+                  </div>
+                ))}
+              </div>
+              
+              <Link href="/register" className="block text-center w-full py-4 rounded-[1.25rem] text-[15px] font-bold bg-[#BC4800] hover:bg-[#9c3c00] text-white transition-all shadow-[0_4px_14px_rgba(188,72,0,0.3)] hover:-translate-y-0.5 mt-auto relative z-10">
+                Berlangganan Tahunan
               </Link>
             </div>
 
@@ -532,10 +579,10 @@ export default function Home() {
           <div>
             <h4 className="text-[12px] font-extrabold tracking-widest uppercase text-slate-900 mb-6 border-l-2 border-blue-600 pl-3">Produk</h4>
             <div className="flex flex-col gap-4">
-              <Link href="#" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Speech-to-Text</Link>
-              <Link href="#" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Text-to-Speech</Link>
-              <Link href="#" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Terjemah</Link>
-              <Link href="#" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Harga</Link>
+              <Link href="/stt" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Speech-to-Text</Link>
+              <Link href="/tts" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Text-to-Speech</Link>
+              <Link href="/translation" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Terjemah</Link>
+              <Link href="/premium" className="text-[15px] font-medium text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Harga</Link>
             </div>
           </div>
           

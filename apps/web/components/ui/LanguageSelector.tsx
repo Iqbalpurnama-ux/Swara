@@ -38,7 +38,7 @@ export function LanguageSelector({ value, onChange, align = "center" }: Language
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  let dropdownClasses = "absolute top-full mt-2 w-48 bg-white/95 backdrop-blur-xl border border-slate-200 shadow-[0_10px_40px_rgba(0,0,0,0.08)] rounded-2xl overflow-hidden z-[100] py-1 transition-all duration-200"
+  let dropdownClasses = "absolute top-full mt-2 w-48 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl border border-slate-200 dark:border-slate-700 shadow-[0_10px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden z-[100] py-1 transition-all duration-200"
   if (align === "left") dropdownClasses += " left-0"
   else if (align === "right") dropdownClasses += " right-0"
   else dropdownClasses += " left-1/2 -translate-x-1/2"
@@ -47,7 +47,7 @@ export function LanguageSelector({ value, onChange, align = "center" }: Language
     <div className="relative" ref={containerRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center gap-2 px-3 md:px-5 py-2 bg-slate-50/80 hover:bg-blue-50/80 rounded-full transition-all border border-slate-200 text-slate-700 font-bold text-xs md:text-sm hover:border-blue-200 hover:text-blue-700 active:scale-95"
+        className="flex items-center justify-center gap-2 px-3 md:px-5 py-2 bg-slate-50/80 dark:bg-slate-700/80 hover:bg-blue-50/80 dark:hover:bg-slate-600/80 rounded-full transition-all border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-bold text-xs md:text-sm hover:border-blue-200 dark:hover:border-blue-500 hover:text-blue-700 dark:hover:text-blue-400 active:scale-95"
       >
         {selectedLanguage.label}
         <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
@@ -55,7 +55,7 @@ export function LanguageSelector({ value, onChange, align = "center" }: Language
 
       {isOpen && (
         <div className={dropdownClasses}>
-          <div className="max-h-[60vh] overflow-y-auto custom-scrollbar">
+          <div className="max-h-[250px] overflow-y-auto custom-scrollbar">
             {LANGUAGES.map((lang) => {
               const isSelected = lang.value === value
               return (
@@ -67,8 +67,8 @@ export function LanguageSelector({ value, onChange, align = "center" }: Language
                   }}
                   className={`w-full text-left px-4 py-2.5 text-sm font-semibold flex items-center justify-between transition-colors ${
                     isSelected 
-                      ? "bg-blue-50 text-blue-700" 
-                      : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                      ? "bg-blue-50 dark:bg-slate-700/50 text-blue-700 dark:text-blue-400" 
+                      : "text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
                   }`}
                 >
                   {lang.label}

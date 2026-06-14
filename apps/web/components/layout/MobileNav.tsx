@@ -16,7 +16,7 @@ export function MobileNav() {
   ]
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#E2E8F0] flex justify-around items-center h-16 z-40 px-2 pb-safe">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-[#E2E8F0] dark:border-slate-800 flex justify-around items-center h-16 z-40 px-2 pb-safe">
       {tabs.map((tab) => {
         const isActive = pathname === tab.href || (tab.href !== "/dashboard" && pathname.startsWith(tab.href))
         const Icon = tab.icon
@@ -26,10 +26,10 @@ export function MobileNav() {
             key={tab.href}
             href={tab.href}
             className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${
-              isActive ? "text-[#2563EB]" : "text-[#94A3B8] hover:text-[#334155]"
+              isActive ? "text-[#2563EB] dark:text-blue-400" : "text-[#94A3B8] dark:text-slate-500 hover:text-[#334155] dark:hover:text-slate-300"
             }`}
           >
-            <Icon className={`w-6 h-6 ${isActive ? "text-[#2563EB]" : ""}`} />
+            <Icon className={`w-6 h-6 ${isActive ? "text-[#2563EB] dark:text-blue-400" : ""}`} />
             <span className="text-[10px] font-semibold">{tab.label}</span>
           </Link>
         )

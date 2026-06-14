@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import TranslationInterface from "@/components/translation/TranslationInterface"
 
 export const metadata: Metadata = {
-  title: "Terjemahan Real-time | Swara",
-  description: "Terjemahkan ucapan ke berbagai bahasa secara langsung.",
+  title: "Terjemah Real-time | Swara",
+  description: "Terjemah ucapan ke berbagai bahasa secara langsung.",
 }
 
 export default function TranslationPage() {

@@ -3,29 +3,39 @@
 import { useState, useEffect, useRef } from "react"
 import { Mic, Square, Copy, Save, Trash2, Globe2 } from "lucide-react"
 import { useUiStore } from "@/store/uiStore"
+import { saveNotification } from "@/lib/notifications"
 import { LanguageSelector } from "@/components/ui/LanguageSelector"
-
-declare global {
-  interface Window {
-    SpeechRecognition: any;
-    webkitSpeechRecognition: any;
-  }
-}
+import { useTranslation } from "@/lib/i18n"
 
 export default function SpeechToTextInterface() {
-  const { triggerFlash } = useUiStore()
+  const { t } = useTranslation()
+  const { triggerFlash, addNotification } = useUiStore()
+  const [language, setLanguage] = useState("id-ID")
   
   const [isRecording, setIsRecording] = useState(false)
   const [finalTranscript, setFinalTranscript] = useState("")
   const [interimTranscript, setInterimTranscript] = useState("")
-  const [language, setLanguage] = useState("id-ID")
   
   const recognitionRef = useRef<any>(null)
   const transcriptAreaRef = useRef<HTMLDivElement>(null)
+  const settingsRef = useRef({ autoPunctuation: true })
+
+  useEffect(() => {
+    const saved = localStorage.getItem("swara_settings")
+    if (saved) {
+      const parsed = JSON.parse(saved)
+      if (parsed.autoPunctuation !== undefined) {
+        settingsRef.current.autoPunctuation = parsed.autoPunctuation
+      }
+      if (parsed.mainLanguage) {
+        setLanguage(parsed.mainLanguage)
+      }
+    }
+  }, [])
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
       if (SpeechRecognition) {
         recognitionRef.current = new SpeechRecognition()
         recognitionRef.current.continuous = true
@@ -34,15 +44,18 @@ export default function SpeechToTextInterface() {
         recognitionRef.current.onresult = (event: any) => {
           let interim = ""
           let final = ""
-          
           for (let i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
-              final += event.results[i][0].transcript + " "
+              let text = event.results[i][0].transcript.trim()
+              if (settingsRef.current.autoPunctuation && text.length > 0) {
+                text = text.charAt(0).toUpperCase() + text.slice(1)
+                if (!/[.!?]$/.test(text)) text += "."
+              }
+              final += text + " "
             } else {
               interim += event.results[i][0].transcript
             }
           }
-          
           if (final) {
             setFinalTranscript(prev => prev + final)
           }
@@ -51,21 +64,29 @@ export default function SpeechToTextInterface() {
         
         recognitionRef.current.onerror = (event: any) => {
           if (event.error !== "no-speech") {
-            triggerFlash("error", "Koneksi mikrofon terputus")
             setIsRecording(false)
+            let errMsg = "Koneksi mikrofon terputus"
+            if (event.error === "not-allowed") errMsg = "Izin mikrofon ditolak (Periksa pengaturan browser)"
+            if (event.error === "network") errMsg = "Tidak ada koneksi internet"
+            addNotification("error", errMsg)
           }
         }
-        
+
         recognitionRef.current.onend = () => {
           if (isRecording) {
-            try {
-              recognitionRef.current.start()
-            } catch(e) {}
+            try { recognitionRef.current.start() } catch(e) {}
           }
         }
       }
     }
-  }, [triggerFlash])
+
+    // Cleanup: Stop recognition when component unmounts
+    return () => {
+      if (recognitionRef.current) {
+        recognitionRef.current.stop()
+      }
+    }
+  }, [isRecording, triggerFlash, addNotification])
 
   useEffect(() => {
     if (recognitionRef.current) {
@@ -87,7 +108,7 @@ export default function SpeechToTextInterface() {
 
   const toggleRecording = () => {
     if (!recognitionRef.current) {
-      triggerFlash("error", "Browser tidak didukung")
+      addNotification("error", "Browser tidak didukung")
       return
     }
 
@@ -96,7 +117,6 @@ export default function SpeechToTextInterface() {
       setIsRecording(false)
     } else {
       try {
-        setInterimTranscript("")
         recognitionRef.current.start()
         setIsRecording(true)
       } catch (e) {}
@@ -107,20 +127,52 @@ export default function SpeechToTextInterface() {
     const textToCopy = (finalTranscript + interimTranscript).trim()
     if (!textToCopy) return
     navigator.clipboard.writeText(textToCopy).then(() => {
-      triggerFlash("success", "Disalin!")
+      addNotification("success", "Disalin!")
     })
   }
 
   const handleClear = () => {
     setFinalTranscript("")
     setInterimTranscript("")
-    triggerFlash("success", "Dihapus")
+    addNotification("success", "Dihapus")
   }
 
   const handleSave = () => {
     if (!finalTranscript.trim()) return
-    triggerFlash("success", "Tersimpan")
+    const session = {
+      id: Date.now(),
+      type: "Dikte",
+      date: new Date().toISOString(),
+      text: finalTranscript.trim()
+    }
+    const existing = JSON.parse(localStorage.getItem("swara_dictations") || "[]")
+    existing.push(session)
+    localStorage.setItem("swara_stt_sessions", JSON.stringify(existing))
+    addNotification("success", "Sesi STT tersimpan!")
+    saveNotification("Transkrip Tersimpan", "Hasil transkrip (Speech to Text) berhasil disimpan.", "success")
   }
+
+  // Keyboard Shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger if user is typing in an input/textarea (though STT doesn't have one, it's good practice)
+      if (document.activeElement?.tagName === "INPUT" || document.activeElement?.tagName === "TEXTAREA") return
+
+      if (e.code === "Space") {
+        e.preventDefault()
+        toggleRecording()
+      } else if (e.code === "KeyS" && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault()
+        handleSave()
+      } else if (e.code === "Backspace" && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault()
+        handleClear()
+      }
+    }
+    
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [isRecording, finalTranscript, interimTranscript]) // Dependencies needed so handlers use latest state
 
   return (
     <div className="flex flex-col h-full relative overflow-hidden font-sans">
@@ -134,10 +186,10 @@ export default function SpeechToTextInterface() {
 
       {/* Floating Toolbar */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[90%] md:max-w-md">
-        <div className="flex items-center justify-between bg-white/80 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-full px-3 py-2">
+        <div className="flex items-center justify-between bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-white dark:border-slate-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-full px-3 py-2">
           
           <div className="flex items-center group">
-            <Globe2 className="w-4 h-4 text-blue-600 mr-2" />
+            <Globe2 className="w-4 h-4 text-blue-600 dark:text-blue-400 mr-2" />
             <LanguageSelector 
               value={language} 
               onChange={setLanguage} 
@@ -148,23 +200,26 @@ export default function SpeechToTextInterface() {
           <div className="flex items-center gap-1">
             <button 
               onClick={handleCopy}
-              className="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all"
-              title="Salin"
+              className="w-10 h-10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full transition-all"
+              title={t("stt.copy")}
+              aria-label="Salin teks"
             >
               <Copy className="w-4 h-4" />
             </button>
             <button 
               onClick={handleClear}
-              className="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-red-500 hover:bg-red-50 rounded-full transition-all"
-              title="Hapus"
+              className="w-10 h-10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-full transition-all"
+              title={t("stt.delete")}
+              aria-label="Hapus semua teks"
             >
               <Trash2 className="w-4 h-4" />
             </button>
             <button 
               onClick={handleSave}
-              className="h-10 px-5 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold text-sm hover:bg-blue-700 active:scale-95 transition-all shadow-[0_4px_14px_0_rgb(37,99,235,0.39)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.23)] ml-2"
+              className="h-10 px-5 flex items-center justify-center bg-blue-600 dark:bg-blue-500 text-white rounded-full font-bold text-sm hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all shadow-[0_4px_14px_0_rgb(37,99,235,0.39)] dark:shadow-[0_4px_14px_0_rgba(59,130,246,0.2)] ml-2"
+              aria-label="Simpan teks"
             >
-              Simpan
+              {t("stt.save")}
             </button>
           </div>
         </div>
@@ -206,22 +261,27 @@ export default function SpeechToTextInterface() {
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-800 mb-4">
-              {isRecording ? "Mendengarkan..." : "Siap Mendengar."}
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-800 dark:text-white mb-4">
+              {isRecording ? t("stt.listening") : t("stt.title")}
             </h2>
-            <p className="text-slate-500 font-medium text-lg max-w-md">
+            <p className="text-slate-500 dark:text-slate-400 font-medium text-lg max-w-md">
               {isRecording 
-                ? "Silakan berbicara. Suara Anda sedang diterjemahkan ke teks." 
-                : "Tekan tombol mikrofon di bawah untuk memulai percakapan."}
+                ? t("stt.listening_desc") 
+                : t("stt.desc")}
             </p>
           </div>
         ) : (
           <div className="flex-1 flex flex-col justify-end min-h-full">
-            <div className="text-[32px] md:text-[44px] font-medium leading-[1.4] tracking-[-0.03em] max-w-4xl bg-white/40 p-8 md:p-12 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.02)] backdrop-blur-sm border border-white/60">
-              <span className="text-slate-900 transition-colors duration-500 ease-out">{finalTranscript}</span>
-              <span className="text-slate-400 transition-colors duration-200">{interimTranscript}</span>
+            <div 
+              className="max-w-4xl text-[32px] md:text-[44px] font-bold leading-[1.4] tracking-[-0.03em] bg-white/40 dark:bg-slate-800/40 p-8 md:p-12 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.02)] backdrop-blur-sm border border-white/60 dark:border-slate-700/50"
+              aria-live="polite"
+              role="region"
+              aria-label="Teks Transkripsi"
+            >
+              <span className="text-slate-900 dark:text-white transition-colors duration-500">{finalTranscript}</span>
+              <span className="text-blue-600/70 dark:text-blue-400/70 transition-colors duration-200">{interimTranscript}</span>
               {isRecording && interimTranscript === "" && (
-                <span className="inline-block w-3 h-8 bg-blue-500 animate-pulse ml-2 align-middle rounded-sm"></span>
+                <span className="inline-block w-3 h-8 bg-blue-500 animate-pulse ml-2 align-middle rounded-sm" aria-hidden="true"></span>
               )}
             </div>
           </div>
@@ -241,16 +301,17 @@ export default function SpeechToTextInterface() {
           
           <button
             onClick={toggleRecording}
+            aria-label={isRecording ? "Berhenti mendengarkan" : "Mulai mendengarkan"}
             className={`relative flex items-center justify-center transition-all duration-500 ease-out transform group-hover:scale-[1.05] active:scale-95 ${
               isRecording 
-                ? "w-24 h-24 bg-white shadow-[0_10px_40px_rgba(37,99,235,0.3)] rounded-[2.5rem] border border-blue-100" 
+                ? "w-24 h-24 bg-white dark:bg-slate-800 shadow-[0_10px_40px_rgba(37,99,235,0.3)] rounded-[2.5rem] border border-blue-100 dark:border-blue-500/30" 
                 : "w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-700 shadow-[0_10px_30px_rgba(37,99,235,0.4)] rounded-full border border-blue-400/30"
             }`}
           >
             {isRecording ? (
               <div className="relative flex items-center justify-center">
-                <div className="absolute inset-0 bg-blue-100 rounded-xl animate-ping opacity-50 scale-150"></div>
-                <div className="w-8 h-8 rounded-xl bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)]"></div>
+                <div className="absolute inset-0 bg-blue-100 dark:bg-blue-500/20 rounded-xl animate-ping opacity-50 scale-150"></div>
+                <div className="w-8 h-8 rounded-xl bg-blue-600 dark:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.5)]"></div>
               </div>
             ) : (
               <Mic className="w-8 h-8 text-white stroke-[2.5px]" />
