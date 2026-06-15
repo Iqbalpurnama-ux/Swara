@@ -20,12 +20,7 @@ type HistoryItem = {
   hasSummary?: boolean, 
   summaryHtml?: string 
 }
-const INITIAL_HISTORY: HistoryItem[] = [
-  { id: "1", type: "stt", text: "Selamat pagi semua, mari kita mulai meeting hari ini tentang desain UI terbaru. Tolong pastikan tombol submit sudah sesuai dengan panduan aksesibilitas WCAG.", date: "Hari Ini, 09:30", label: "Rapat", isPremium: true, hasSummary: true },
-  { id: "2", type: "tts", text: "Tolong kirimkan laporannya ke email saya sebelum jam 5 sore ya, terima kasih banyak atas kerjasamanya.", date: "Hari Ini, 14:15", label: "Kerja", isPremium: false },
-  { id: "3", type: "translation", text: "Where is the nearest train station? I need to go to the airport quickly.", translated: "Di mana stasiun kereta terdekat? Saya perlu pergi ke bandara dengan cepat.", date: "Kemarin, 19:20", label: "Travel", isPremium: false },
-  { id: "4", type: "stt", text: "Catatan resep dokter: Minum obat antibiotik 3x sehari setelah makan, dan obat flu 1x sebelum tidur.", date: "2 Hari yang lalu", label: "Penting", isPremium: false },
-]
+const INITIAL_HISTORY: HistoryItem[] = []
 
 export default function HistoryManager() {
   const { t } = useTranslation()
