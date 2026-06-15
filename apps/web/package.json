@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cd ../.. && npx prisma generate --schema=apps/api/prisma/schema.prisma && cd apps/web && npm install --os=linux --cpu=x64 @tailwindcss/oxide-linux-x64-gnu --no-save && next build",
+    "build": "cd ../.. && npx prisma generate --schema=apps/api/prisma/schema.prisma && cd apps/web && next build",
     "start": "next start",
     "lint": "eslint",
     "test": "jest"
@@ -28,6 +28,9 @@
     "tailwind-merge": "^3.6.0",
     "zod": "^4.4.3",
     "zustand": "^5.0.14"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-linux-x64-gnu": "4.0.0-beta.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
