@@ -10,15 +10,18 @@ export class GoogleCloudService {
   private ttsClient: textToSpeech.TextToSpeechClient;
 
   constructor() {
-    // Determine the absolute path to the gcp-key.json
-    // __dirname is usually dist/google-cloud, so we go up to the project root (apps/api)
-    const keyFilename = path.resolve(__dirname, '../../gcp-key.json');
-
-    this.logger.log(`Initializing GCP Clients using key: ${keyFilename}`);
-
     try {
-      this.speechClient = new speech.SpeechClient({ keyFilename });
-      this.ttsClient = new textToSpeech.TextToSpeechClient({ keyFilename });
+      if (process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON) {
+        this.logger.log('Initializing GCP Clients using environment variable');
+        const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
+        this.speechClient = new speech.SpeechClient({ credentials });
+        this.ttsClient = new textToSpeech.TextToSpeechClient({ credentials });
+      } else {
+        const keyFilename = path.resolve(__dirname, '../../gcp-key.json');
+        this.logger.log(`Initializing GCP Clients using key: ${keyFilename}`);
+        this.speechClient = new speech.SpeechClient({ keyFilename });
+        this.ttsClient = new textToSpeech.TextToSpeechClient({ keyFilename });
+      }
       this.logger.log('Google Cloud Clients initialized successfully');
     } catch (error) {
       this.logger.error('Failed to initialize Google Cloud Clients', error);
