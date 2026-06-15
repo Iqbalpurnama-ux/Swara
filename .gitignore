@@ -25,3 +25,5 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+apps/api/gcp-key.json

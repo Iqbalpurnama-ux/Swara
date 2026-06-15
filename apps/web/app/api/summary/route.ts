@@ -1,8 +1,14 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
 
 export async function POST(req: Request) {
   try {
+    const session = await auth();
+    if (!session?.user || session.user.role !== "premium") {
+      return NextResponse.json({ error: "Unauthorized. Fitur SmartNote AI hanya untuk pengguna Premium." }, { status: 403 });
+    }
+
     const { text } = await req.json();
     
     if (!text) {

@@ -6,9 +6,20 @@ import { useUiStore } from "@/store/uiStore"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useTranslation } from "@/lib/i18n"
+import { getHistory, deleteHistory, updateHistorySummary } from "@/app/actions/history"
 
-// Mock Data
-type HistoryItem = { id: number, type: string, text: string, date: string, label: string, translated?: string, isPremium: boolean, hasSummary?: boolean, summaryHtml?: string }
+// Mock Data structure based on Prisma History model
+type HistoryItem = { 
+  id: string, 
+  type: string, 
+  text: string, 
+  date: string, 
+  label: string, 
+  translated?: string, 
+  isPremium: boolean, 
+  hasSummary?: boolean, 
+  summaryHtml?: string 
+}
 const INITIAL_HISTORY: HistoryItem[] = [
   { id: 1, type: "stt", text: "Selamat pagi semua, mari kita mulai meeting hari ini tentang desain UI terbaru. Tolong pastikan tombol submit sudah sesuai dengan panduan aksesibilitas WCAG.", date: "Hari Ini, 09:30", label: "Rapat", isPremium: true, hasSummary: true },
   { id: 2, type: "tts", text: "Tolong kirimkan laporannya ke email saya sebelum jam 5 sore ya, terima kasih banyak atas kerjasamanya.", date: "Hari Ini, 14:15", label: "Kerja", isPremium: false },
@@ -19,64 +30,38 @@ const INITIAL_HISTORY: HistoryItem[] = [
 export default function HistoryManager() {
   const { t } = useTranslation()
   const [searchTerm, setSearchTerm] = useState("")
-  const [history, setHistory] = useState<HistoryItem[]>(INITIAL_HISTORY)
-  const [cloudSync, setCloudSync] = useState(false)
-  const [generatingId, setGeneratingId] = useState<number | null>(null)
+  const [history, setHistory] = useState<HistoryItem[]>([])
+  const [cloudSync, setCloudSync] = useState(true)
+  const [generatingId, setGeneratingId] = useState<string | null>(null)
   const { triggerFlash, addNotification } = useUiStore()
   const router = useRouter()
   const isPremiumUser = false // Mock status berlangganan (false = Reguler)
 
   useEffect(() => {
-    try {
-      const translations = JSON.parse(localStorage.getItem("swara_translations") || "[]")
-      const dictations = JSON.parse(localStorage.getItem("swara_dictations") || "[]")
-      const conversations = JSON.parse(localStorage.getItem("swara_conversations") || "[]")
-
-      const formattedTranslations = translations.map((t: any) => ({
-        id: t.id,
-        type: "translation",
-        text: t.original,
-        translated: t.translated,
-        date: new Date(t.date).toLocaleString('id-ID', { dateStyle: 'medium', timeStyle: 'short' }),
-        label: `${t.sourceLang} → ${t.targetLang}`,
-        isPremium: false
-      }))
-
-      const formattedDictations = dictations.map((d: any) => ({
-        id: d.id,
-        type: "stt",
-        text: d.text,
-        date: new Date(d.date).toLocaleString('id-ID', { dateStyle: 'medium', timeStyle: 'short' }),
-        label: "Dikte",
-        isPremium: false
-      }))
-
-      const formattedConversations = conversations.map((c: any) => {
-        const textPreview = c.log && c.log.length > 0 
-          ? c.log.map((l: any) => `${l.speaker}: ${l.text}`).join(' | ') 
-          : "Sesi Percakapan Kosong"
-        return {
-          id: c.id,
-          type: "stt",
-          text: textPreview,
-          date: new Date(c.date).toLocaleString('id-ID', { dateStyle: 'medium', timeStyle: 'short' }),
-          label: "2 Arah",
-          isPremium: false
-        }
-      })
-
-      const combined = [...formattedTranslations, ...formattedDictations, ...formattedConversations].sort((a, b) => b.id - a.id)
-      
-      setHistory(prev => {
-        // Prevent duplicates if useEffect runs twice in strict mode
-        const existingIds = new Set(prev.map(p => p.id))
-        const newItems = combined.filter(c => !existingIds.has(c.id))
-        return [...newItems, ...prev]
-      })
-    } catch (e) {
-      console.error("Error loading history", e)
+    async function fetchHistory() {
+      try {
+        const data = await getHistory()
+        const formatted = data.map((d: any) => ({
+          id: d.id,
+          type: d.type,
+          text: d.originalText,
+          translated: d.translatedText || undefined,
+          date: new Date(d.createdAt).toLocaleString('id-ID', { dateStyle: 'medium', timeStyle: 'short' }),
+          label: d.label || d.type.toUpperCase(),
+          isPremium: !!d.summaryContent,
+          hasSummary: !!d.summaryContent,
+          summaryHtml: d.summaryContent || undefined
+        }))
+        setHistory(formatted)
+      } catch (e) {
+        console.error("Error loading history", e)
+      }
     }
-  }, [])
+    
+    if (cloudSync) {
+      fetchHistory()
+    }
+  }, [cloudSync])
 
   const getIcon = (type: string) => {
     switch(type) {
@@ -101,7 +86,7 @@ export default function HistoryManager() {
     triggerFlash("success", !cloudSync ? "Sinkronisasi Cloud Diaktifkan" : "Sinkronisasi Cloud Dimatikan")
   }
 
-  const generateSummary = async (id: number) => {
+  const generateSummary = async (id: string) => {
     setGeneratingId(id)
     const item = history.find(h => h.id === id)
     
@@ -129,6 +114,8 @@ export default function HistoryManager() {
       if (!response.ok) {
         throw new Error(data.error || 'Terjadi kesalahan')
       }
+
+      await updateHistorySummary(id, data.summary);
 
       setHistory(prev => prev.map(h => 
         h.id === id ? { ...h, isPremium: true, hasSummary: true, summaryHtml: data.summary } : h
@@ -257,24 +244,15 @@ export default function HistoryManager() {
             {/* Actions */}
             <div className="flex items-center gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity self-end md:self-center">
               <button 
-                onClick={(e) => { 
+                onClick={async (e) => { 
                   e.stopPropagation(); 
-                  addNotification("success", t("history.deleted")); 
-                  setHistory(history.filter(h => h.id !== item.id))
-                  // Also remove from localStorage if it's not mock data
                   try {
-                    let trans = JSON.parse(localStorage.getItem("swara_translations") || "[]")
-                    let dict = JSON.parse(localStorage.getItem("swara_dictations") || "[]")
-                    let conv = JSON.parse(localStorage.getItem("swara_conversations") || "[]")
-                    
-                    if (trans.some((t: any) => t.id === item.id)) {
-                      localStorage.setItem("swara_translations", JSON.stringify(trans.filter((t: any) => t.id !== item.id)))
-                    } else if (dict.some((d: any) => d.id === item.id)) {
-                      localStorage.setItem("swara_dictations", JSON.stringify(dict.filter((d: any) => d.id !== item.id)))
-                    } else if (conv.some((c: any) => c.id === item.id)) {
-                      localStorage.setItem("swara_conversations", JSON.stringify(conv.filter((c: any) => c.id !== item.id)))
-                    }
-                  } catch (e) {}
+                    await deleteHistory(item.id)
+                    setHistory(history.filter(h => h.id !== item.id))
+                    addNotification("success", t("history.deleted")); 
+                  } catch (e) {
+                    addNotification("error", "Gagal menghapus riwayat")
+                  }
                 }}
                 className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-50 dark:hover:bg-red-900/30 text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
               >

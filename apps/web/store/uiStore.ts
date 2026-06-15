@@ -31,7 +31,7 @@ export const useUiStore = create<UiState>((set, get) => ({
   flashMessage: null,
   notifications: [],
   isMobileNavOpen: false,
-  notificationDuration: 2500,
+  notificationDuration: 5000,
   reducedMotion: false,
   triggerFlash: (type, message) => {
     set({ flashType: type, flashMessage: message ?? null })

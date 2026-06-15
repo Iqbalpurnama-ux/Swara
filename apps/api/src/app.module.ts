@@ -5,9 +5,10 @@ import { AuthModule } from './auth/auth.module';
 import { GoogleCloudModule } from './google-cloud/google-cloud.module';
 import { SttModule } from './stt/stt.module';
 import { TtsModule } from './tts/tts.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [AuthModule, GoogleCloudModule, SttModule, TtsModule],
+  imports: [AuthModule, GoogleCloudModule, SttModule, TtsModule, PrismaModule],
   controllers: [AppController],
   providers: [AppService],
 })

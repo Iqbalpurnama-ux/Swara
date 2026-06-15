@@ -1,0 +1,8392 @@
+{
+  "en-US": [
+    {
+      "name": "Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Casual-K",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Neural2-A",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Neural2-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Neural2-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Neural2-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Neural2-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Neural2-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Neural2-H",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Neural2-I",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Neural2-J",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-News-K",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-News-L",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-News-N",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Polyglot-1",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Standard-A",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Standard-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Standard-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Standard-H",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Standard-I",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Standard-J",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Studio-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Studio-Q",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Wavenet-A",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Wavenet-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Wavenet-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Wavenet-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Wavenet-H",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-US-Wavenet-I",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-US-Wavenet-J",
+      "gender": "MALE"
+    }
+  ],
+  "af-ZA": [
+    {
+      "name": "af-ZA-Standard-A",
+      "gender": "FEMALE"
+    }
+  ],
+  "am-ET": [
+    {
+      "name": "am-ET-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "am-ET-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "am-ET-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "am-ET-Wavenet-B",
+      "gender": "MALE"
+    }
+  ],
+  "ar-XA": [
+    {
+      "name": "ar-XA-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ar-XA-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ar-XA-Wavenet-D",
+      "gender": "FEMALE"
+    }
+  ],
+  "bg-BG": [
+    {
+      "name": "bg-BG-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bg-BG-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "bg-BG-Standard-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "bn-IN": [
+    {
+      "name": "bn-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "bn-IN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "bn-IN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "ca-ES": [
+    {
+      "name": "ca-ES-Standard-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "cmn-CN": [
+    {
+      "name": "cmn-CN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-CN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-CN-Wavenet-D",
+      "gender": "FEMALE"
+    }
+  ],
+  "cmn-TW": [
+    {
+      "name": "cmn-TW-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-TW-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-TW-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-TW-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cmn-TW-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "cmn-TW-Wavenet-C",
+      "gender": "MALE"
+    }
+  ],
+  "cs-CZ": [
+    {
+      "name": "cs-CZ-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "cs-CZ-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "cs-CZ-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "da-DK": [
+    {
+      "name": "da-DK-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Neural2-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "da-DK-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "da-DK-Wavenet-G",
+      "gender": "MALE"
+    }
+  ],
+  "de-DE": [
+    {
+      "name": "de-DE-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Neural2-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Neural2-H",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Polyglot-1",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Standard-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Standard-H",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Studio-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "de-DE-Studio-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Wavenet-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "de-DE-Wavenet-H",
+      "gender": "MALE"
+    }
+  ],
+  "el-GR": [
+    {
+      "name": "el-GR-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "el-GR-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "el-GR-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "en-AU": [
+    {
+      "name": "en-AU-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Neural2-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Neural2-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-News-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-News-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-News-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Polyglot-1",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-AU-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-AU-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "en-GB": [
+    {
+      "name": "en-GB-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Neural2-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Neural2-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Neural2-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Neural2-N",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Neural2-O",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-News-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-News-H",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-News-I",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-News-J",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-News-K",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-News-L",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-News-M",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Standard-N",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Standard-O",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Studio-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Studio-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Wavenet-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-GB-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Wavenet-N",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-GB-Wavenet-O",
+      "gender": "MALE"
+    }
+  ],
+  "en-IN": [
+    {
+      "name": "en-IN-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Neural2-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Neural2-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Standard-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Standard-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "en-IN-Wavenet-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Wavenet-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "en-IN-Wavenet-F",
+      "gender": "MALE"
+    }
+  ],
+  "es-ES": [
+    {
+      "name": "es-ES-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Neural2-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Neural2-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Neural2-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Neural2-H",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Polyglot-1",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Standard-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Standard-H",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Studio-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Studio-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Wavenet-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-ES-Wavenet-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-ES-Wavenet-H",
+      "gender": "FEMALE"
+    }
+  ],
+  "es-US": [
+    {
+      "name": "es-US-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Neural2-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-News-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-News-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-News-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-News-G",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Polyglot-1",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Studio-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "es-US-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "es-US-Wavenet-C",
+      "gender": "MALE"
+    }
+  ],
+  "et-EE": [
+    {
+      "name": "et-EE-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "et-EE-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "et-EE-Standard-A",
+      "gender": "MALE"
+    }
+  ],
+  "eu-ES": [
+    {
+      "name": "eu-ES-Standard-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "fi-FI": [
+    {
+      "name": "fi-FI-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "fi-FI-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fi-FI-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "fil-PH": [
+    {
+      "name": "fil-PH-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fil-PH-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fil-PH-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "fil-PH-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fil-PH-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fil-PH-Wavenet-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fil-PH-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "fil-PH-Wavenet-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fil-ph-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fil-ph-Neural2-D",
+      "gender": "MALE"
+    }
+  ],
+  "fr-CA": [
+    {
+      "name": "fr-CA-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Neural2-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Neural2-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-CA-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-CA-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "fr-FR": [
+    {
+      "name": "fr-FR-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Neural2-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Neural2-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Polyglot-1",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Studio-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Studio-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "fr-FR-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "fr-FR-Wavenet-G",
+      "gender": "MALE"
+    }
+  ],
+  "gl-ES": [
+    {
+      "name": "gl-ES-Standard-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "gu-IN": [
+    {
+      "name": "gu-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "gu-IN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "gu-IN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "he-IL": [
+    {
+      "name": "he-IL-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "he-IL-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "he-IL-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "hi-IN": [
+    {
+      "name": "hi-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Neural2-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Neural2-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Standard-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Standard-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "hi-IN-Wavenet-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Wavenet-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hi-IN-Wavenet-F",
+      "gender": "MALE"
+    }
+  ],
+  "hr-HR": [
+    {
+      "name": "hr-HR-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hr-HR-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    }
+  ],
+  "hu-HU": [
+    {
+      "name": "hu-HU-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "hu-HU-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "hu-HU-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "id-ID": [
+    {
+      "name": "id-ID-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "id-ID-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "id-ID-Wavenet-D",
+      "gender": "FEMALE"
+    }
+  ],
+  "is-IS": [
+    {
+      "name": "is-IS-Standard-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "it-IT": [
+    {
+      "name": "it-IT-Chirp-HD-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp-HD-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp-HD-O",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Neural2-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Neural2-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Standard-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Standard-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "it-IT-Wavenet-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "it-IT-Wavenet-F",
+      "gender": "MALE"
+    }
+  ],
+  "ja-JP": [
+    {
+      "name": "ja-JP-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Neural2-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Neural2-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Neural2-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Wavenet-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ja-JP-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ja-JP-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "kn-IN": [
+    {
+      "name": "kn-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "kn-IN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "kn-IN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "ko-KR": [
+    {
+      "name": "ko-KR-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Neural2-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Neural2-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Standard-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Wavenet-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ko-KR-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "ko-KR-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "lt-LT": [
+    {
+      "name": "lt-LT-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lt-LT-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "lt-LT-Standard-B",
+      "gender": "MALE"
+    }
+  ],
+  "lv-LV": [
+    {
+      "name": "lv-LV-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "lv-LV-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "lv-LV-Standard-B",
+      "gender": "MALE"
+    }
+  ],
+  "ml-IN": [
+    {
+      "name": "ml-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ml-IN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ml-IN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "mr-IN": [
+    {
+      "name": "mr-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "mr-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "mr-IN-Wavenet-C",
+      "gender": "FEMALE"
+    }
+  ],
+  "ms-MY": [
+    {
+      "name": "ms-MY-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ms-MY-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ms-MY-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ms-MY-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ms-MY-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ms-MY-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ms-MY-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ms-MY-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "nb-NO": [
+    {
+      "name": "nb-NO-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "nb-NO-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nb-NO-Wavenet-G",
+      "gender": "MALE"
+    }
+  ],
+  "nl-BE": [
+    {
+      "name": "nl-BE-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-BE-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-BE-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "nl-NL": [
+    {
+      "name": "nl-NL-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "nl-NL-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "nl-NL-Wavenet-G",
+      "gender": "MALE"
+    }
+  ],
+  "pa-IN": [
+    {
+      "name": "pa-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "pa-IN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pa-IN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "pl-PL": [
+    {
+      "name": "pl-PL-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "pl-PL-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pl-PL-Wavenet-G",
+      "gender": "MALE"
+    }
+  ],
+  "pt-BR": [
+    {
+      "name": "pt-BR-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Neural2-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Neural2-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Standard-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-BR-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Wavenet-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-BR-Wavenet-E",
+      "gender": "MALE"
+    }
+  ],
+  "pt-PT": [
+    {
+      "name": "pt-PT-Standard-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-PT-Standard-F",
+      "gender": "MALE"
+    },
+    {
+      "name": "pt-PT-Wavenet-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "pt-PT-Wavenet-F",
+      "gender": "MALE"
+    }
+  ],
+  "ro-RO": [
+    {
+      "name": "ro-RO-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ro-RO-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ro-RO-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "ru-RU": [
+    {
+      "name": "ru-RU-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Standard-E",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ru-RU-Wavenet-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ru-RU-Wavenet-E",
+      "gender": "FEMALE"
+    }
+  ],
+  "sk-SK": [
+    {
+      "name": "sk-SK-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sk-SK-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sk-SK-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "sl-SI": [
+    {
+      "name": "sl-SI-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sl-SI-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    }
+  ],
+  "sr-RS": [
+    {
+      "name": "sr-RS-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sr-RS-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sr-RS-Standard-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "sv-SE": [
+    {
+      "name": "sv-SE-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Standard-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Standard-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Standard-G",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-C",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-F",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sv-SE-Wavenet-G",
+      "gender": "MALE"
+    }
+  ],
+  "sw-KE": [
+    {
+      "name": "sw-KE-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "sw-KE-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    }
+  ],
+  "ta-IN": [
+    {
+      "name": "ta-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ta-IN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ta-IN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "te-IN": [
+    {
+      "name": "te-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "te-IN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "te-IN-Standard-D",
+      "gender": "MALE"
+    }
+  ],
+  "th-TH": [
+    {
+      "name": "th-TH-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "th-TH-Neural2-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "th-TH-Standard-A",
+      "gender": "FEMALE"
+    }
+  ],
+  "tr-TR": [
+    {
+      "name": "tr-TR-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Standard-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Standard-E",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "tr-TR-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Wavenet-D",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "tr-TR-Wavenet-E",
+      "gender": "MALE"
+    }
+  ],
+  "uk-UA": [
+    {
+      "name": "uk-UA-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "uk-UA-Standard-B",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "uk-UA-Wavenet-B",
+      "gender": "FEMALE"
+    }
+  ],
+  "ur-IN": [
+    {
+      "name": "ur-IN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "ur-IN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "ur-IN-Wavenet-B",
+      "gender": "MALE"
+    }
+  ],
+  "vi-VN": [
+    {
+      "name": "vi-VN-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Neural2-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Neural2-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Standard-D",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Wavenet-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Wavenet-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "vi-VN-Wavenet-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "vi-VN-Wavenet-D",
+      "gender": "MALE"
+    }
+  ],
+  "yue-HK": [
+    {
+      "name": "yue-HK-Chirp3-HD-Achernar",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Achird",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Algenib",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Algieba",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Alnilam",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Aoede",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Autonoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Callirrhoe",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Charon",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Despina",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Enceladus",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Erinome",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Fenrir",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Gacrux",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Iapetus",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Kore",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Laomedeia",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Leda",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Orus",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Puck",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Pulcherrima",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Rasalgethi",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Sadachbia",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Sadaltager",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Schedar",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Sulafat",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Umbriel",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Vindemiatrix",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Zephyr",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Chirp3-HD-Zubenelgenubi",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Standard-A",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Standard-B",
+      "gender": "MALE"
+    },
+    {
+      "name": "yue-HK-Standard-C",
+      "gender": "FEMALE"
+    },
+    {
+      "name": "yue-HK-Standard-D",
+      "gender": "MALE"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ export default function STTPage() {
       <SpeechToTextInterface />
       
       {/* Live Caption Button (top-right corner, below toolbar) */}
-      <div className="absolute top-20 right-6 z-40">
+      <div className="absolute top-20 right-6 z-[100]">
         <LiveCaptionMode />
       </div>
     </div>

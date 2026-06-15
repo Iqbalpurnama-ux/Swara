@@ -6,122 +6,31 @@ import { useUiStore } from "@/store/uiStore"
 import { saveNotification } from "@/lib/notifications"
 import { LanguageSelector } from "@/components/ui/LanguageSelector"
 import { useTranslation } from "@/lib/i18n"
+import { useSpeechRecognition } from "@/hooks/useSpeechRecognition"
+import { saveHistory } from "@/app/actions/history"
 
 export default function SpeechToTextInterface() {
   const { t } = useTranslation()
   const { triggerFlash, addNotification } = useUiStore()
-  const [language, setLanguage] = useState("id-ID")
   
-  const [isRecording, setIsRecording] = useState(false)
-  const [finalTranscript, setFinalTranscript] = useState("")
-  const [interimTranscript, setInterimTranscript] = useState("")
+  const {
+    isRecording,
+    finalTranscript,
+    interimTranscript,
+    language,
+    setLanguage,
+    toggleRecording,
+    clearTranscript,
+    setFinalTranscript
+  } = useSpeechRecognition()
   
-  const recognitionRef = useRef<any>(null)
   const transcriptAreaRef = useRef<HTMLDivElement>(null)
-  const settingsRef = useRef({ autoPunctuation: true })
-
-  useEffect(() => {
-    const saved = localStorage.getItem("swara_settings")
-    if (saved) {
-      const parsed = JSON.parse(saved)
-      if (parsed.autoPunctuation !== undefined) {
-        settingsRef.current.autoPunctuation = parsed.autoPunctuation
-      }
-      if (parsed.mainLanguage) {
-        setLanguage(parsed.mainLanguage)
-      }
-    }
-  }, [])
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
-      if (SpeechRecognition) {
-        recognitionRef.current = new SpeechRecognition()
-        recognitionRef.current.continuous = true
-        recognitionRef.current.interimResults = true
-        
-        recognitionRef.current.onresult = (event: any) => {
-          let interim = ""
-          let final = ""
-          for (let i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-              let text = event.results[i][0].transcript.trim()
-              if (settingsRef.current.autoPunctuation && text.length > 0) {
-                text = text.charAt(0).toUpperCase() + text.slice(1)
-                if (!/[.!?]$/.test(text)) text += "."
-              }
-              final += text + " "
-            } else {
-              interim += event.results[i][0].transcript
-            }
-          }
-          if (final) {
-            setFinalTranscript(prev => prev + final)
-          }
-          setInterimTranscript(interim)
-        }
-        
-        recognitionRef.current.onerror = (event: any) => {
-          if (event.error !== "no-speech") {
-            setIsRecording(false)
-            let errMsg = "Koneksi mikrofon terputus"
-            if (event.error === "not-allowed") errMsg = "Izin mikrofon ditolak (Periksa pengaturan browser)"
-            if (event.error === "network") errMsg = "Tidak ada koneksi internet"
-            addNotification("error", errMsg)
-          }
-        }
-
-        recognitionRef.current.onend = () => {
-          if (isRecording) {
-            try { recognitionRef.current.start() } catch(e) {}
-          }
-        }
-      }
-    }
-
-    // Cleanup: Stop recognition when component unmounts
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop()
-      }
-    }
-  }, [isRecording, triggerFlash, addNotification])
-
-  useEffect(() => {
-    if (recognitionRef.current) {
-      recognitionRef.current.lang = language
-      if (isRecording) {
-        recognitionRef.current.stop()
-        setTimeout(() => {
-          try { recognitionRef.current.start() } catch(e) {}
-        }, 100)
-      }
-    }
-  }, [language, isRecording])
 
   useEffect(() => {
     if (transcriptAreaRef.current) {
       transcriptAreaRef.current.scrollTop = transcriptAreaRef.current.scrollHeight
     }
   }, [finalTranscript, interimTranscript])
-
-  const toggleRecording = () => {
-    if (!recognitionRef.current) {
-      addNotification("error", "Browser tidak didukung")
-      return
-    }
-
-    if (isRecording) {
-      recognitionRef.current.stop()
-      setIsRecording(false)
-    } else {
-      try {
-        recognitionRef.current.start()
-        setIsRecording(true)
-      } catch (e) {}
-    }
-  }
 
   const handleCopy = () => {
     const textToCopy = (finalTranscript + interimTranscript).trim()
@@ -132,24 +41,24 @@ export default function SpeechToTextInterface() {
   }
 
   const handleClear = () => {
-    setFinalTranscript("")
-    setInterimTranscript("")
+    clearTranscript()
     addNotification("success", "Dihapus")
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!finalTranscript.trim()) return
-    const session = {
-      id: Date.now(),
-      type: "Dikte",
-      date: new Date().toISOString(),
-      text: finalTranscript.trim()
+    try {
+      await saveHistory({
+        type: "stt",
+        originalText: finalTranscript.trim(),
+        label: "Dikte",
+        sourceLanguageCode: language
+      })
+      addNotification("success", "Sesi STT tersimpan!")
+      saveNotification("Transkrip Tersimpan", "Hasil transkrip (Speech to Text) berhasil disimpan.", "success")
+    } catch (e) {
+      addNotification("error", "Gagal menyimpan, pastikan Anda sudah login.")
     }
-    const existing = JSON.parse(localStorage.getItem("swara_dictations") || "[]")
-    existing.push(session)
-    localStorage.setItem("swara_stt_sessions", JSON.stringify(existing))
-    addNotification("success", "Sesi STT tersimpan!")
-    saveNotification("Transkrip Tersimpan", "Hasil transkrip (Speech to Text) berhasil disimpan.", "success")
   }
 
   // Keyboard Shortcuts

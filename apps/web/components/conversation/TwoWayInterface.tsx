@@ -10,6 +10,7 @@ import QuickPhraseManager from "@/components/conversation/QuickPhraseManager"
 import { useUiStore } from "@/store/uiStore"
 import { saveNotification } from "@/lib/notifications"
 import { useTranslation } from "@/lib/i18n"
+import { saveHistory } from "@/app/actions/history"
 
 export default function TwoWayInterface() {
   const { t } = useTranslation()
@@ -66,10 +67,14 @@ export default function TwoWayInterface() {
 
   // Auto-select voices when languages change
   useEffect(() => {
-    const defaultMyVoice = VOICES.find(v => v.lang === myLang)?.name || ""
-    setMyVoice(defaultMyVoice)
-    setPartnerTranslationVoice(defaultMyVoice) // translation also plays in myLang
+    const defaultPartnerVoice = VOICES.find(v => v.lang === myLang)?.name || ""
+    setPartnerTranslationVoice(defaultPartnerVoice)
   }, [myLang])
+
+  useEffect(() => {
+    const defaultMyVoice = VOICES.find(v => v.lang === partnerLang)?.name || ""
+    setMyVoice(defaultMyVoice)
+  }, [partnerLang])
 
   useEffect(() => { enableTranslationRef.current = enableTranslation }, [enableTranslation])
   useEffect(() => { partnerLangRef.current = partnerLang }, [partnerLang])
@@ -329,11 +334,16 @@ export default function TwoWayInterface() {
     }
 
     let textToSpeak = myText.trim()
+    if (settingsRef.current.autoPunctuation && textToSpeak.length > 0) {
+      textToSpeak = textToSpeak.charAt(0).toUpperCase() + textToSpeak.slice(1)
+      if (!/[.!?]$/.test(textToSpeak)) textToSpeak += "."
+    }
+    
     let translatedText = ""
 
-    if (enableTranslationRef.current && baseLang !== myLang) {
+    if (enableTranslationRef.current && myLang !== partnerLang) {
       try {
-        const translated = await translateText(textToSpeak, baseLang, myLang)
+        const translated = await translateText(textToSpeak, myLang, partnerLang)
         if (translated) {
           translatedText = translated
           textToSpeak = translated
@@ -357,14 +367,14 @@ export default function TwoWayInterface() {
     }
 
     try {
-      const voice = VOICES.find(v => v.name === myVoice) || VOICES.find(v => v.lang === myLang)
+      const voice = VOICES.find(v => v.name === myVoice) || VOICES.find(v => v.lang === partnerLang)
       
       const response = await fetch("http://localhost:3001/tts/synthesize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           text: textToSpeak,
-          languageCode: voice?.lang || myLang,
+          languageCode: voice?.lang || partnerLang,
           voiceName: voice?.name,
           gender: voice?.gender
         })
@@ -432,24 +442,26 @@ export default function TwoWayInterface() {
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [isListening, myText, isPlaying]) // dependencies for correct state inside handlers
 
-  const handleSaveSession = () => {
+  const handleSaveSession = async () => {
     if (conversationLog.length === 0) {
       addNotification("warning", "Belum ada percakapan")
       return
     }
-    const session = {
-      id: Date.now(),
-      type: "Percakapan 2 Arah",
-      date: new Date().toISOString(),
-      log: conversationLog,
-      partnerLang,
-      myLang,
+    const textPreview = conversationLog.map((l: any) => `${l.speaker}: ${l.text}`).join(' | ')
+    
+    try {
+      await saveHistory({
+        type: "stt", // Treat conversation as stt in History for now
+        originalText: textPreview,
+        label: "2 Arah",
+        sourceLanguageCode: partnerLang,
+        targetLanguageCode: myLang,
+      })
+      addNotification("success", "Sesi percakapan tersimpan!")
+      saveNotification("Percakapan Tersimpan", "Riwayat percakapan 2 arah berhasil disimpan.", "success")
+    } catch (e) {
+      addNotification("error", "Gagal menyimpan, pastikan Anda sudah login.")
     }
-    const existing = JSON.parse(localStorage.getItem("swara_conversations") || "[]")
-    existing.push(session)
-    localStorage.setItem("swara_conversations", JSON.stringify(existing))
-    addNotification("success", "Sesi percakapan tersimpan!")
-    saveNotification("Percakapan Tersimpan", "Riwayat percakapan 2 arah berhasil disimpan.", "success")
   }
 
   // Draggable divider handlers
@@ -618,7 +630,7 @@ export default function TwoWayInterface() {
             </div>
             <LanguageSelector value={myLang} onChange={setMyLang} align="left" />
             <div className="h-4 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
-            <VoiceSelector languageCode={myLang} value={myVoice} onChange={setMyVoice} align="left" />
+            <VoiceSelector languageCode={partnerLang} value={myVoice} onChange={setMyVoice} align="left" />
           </div>
           <div className="flex items-center gap-2">
             <button onClick={handleSaveSession} aria-label="Simpan riwayat percakapan" className="w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-slate-700/80 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shadow-sm" title="Simpan Sesi">

@@ -61,7 +61,7 @@ export function Header({ userName, language = "id-ID" }: HeaderProps) {
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 lg:left-[260px] right-0 h-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-40 flex items-center justify-between px-4 sm:px-8 transition-colors duration-300">
+    <header className="fixed top-0 left-0 lg:left-[260px] right-0 h-20 bg-white/60 backdrop-blur-2xl dark:bg-slate-900/60 border-b border-slate-200/50 dark:border-slate-800/50 z-40 flex items-center justify-between px-4 sm:px-8 transition-colors duration-300">
       
       {/* Search & Breadcrumbs */}
       <div className="flex-1 flex items-center gap-4">

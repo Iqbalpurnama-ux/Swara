@@ -15,7 +15,7 @@ export async function loginAction(prevState: any, formData: FormData) {
     return { errors: result.error.flatten().fieldErrors, email: email?.toString() }
   }
 
-  await signIn("resend", { email: result.data.email, redirectTo: "/dashboard" })
+  await signIn("resend", { email: result.data.email, redirectTo: "/verify-success" })
   return { success: true }
 }
 
@@ -39,7 +39,7 @@ export async function registerAction(prevState: any, formData: FormData) {
   }
 
   // NextAuth Resend provider just needs email.
-  await signIn("resend", { email: result.data.email, redirectTo: "/dashboard" })
+  await signIn("resend", { email: result.data.email, redirectTo: "/verify-success" })
   return { success: true }
 }
 

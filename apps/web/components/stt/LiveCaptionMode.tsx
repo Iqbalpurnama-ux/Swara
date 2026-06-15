@@ -3,35 +3,29 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { Mic, Maximize, Minimize, Plus, Minus, Eye, X } from "lucide-react"
 import { useUiStore } from "@/store/uiStore"
+import { useSpeechRecognition } from "@/hooks/useSpeechRecognition"
 
 export default function LiveCaptionMode() {
   const { addNotification } = useUiStore()
   const [isActive, setIsActive] = useState(false)
-  const [isRecording, setIsRecording] = useState(false)
-  const [transcript, setTranscript] = useState("")
   const [fontSize, setFontSize] = useState(36)
   const [highContrast, setHighContrast] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showControls, setShowControls] = useState(true)
-  const [language, setLanguage] = useState("id-ID")
-  const [interimText, setInterimText] = useState("")
   
-  const recognitionRef = useRef<any>(null)
-  const settingsRef = useRef({ autoPunctuation: true })
-
-  // Load settings
-  useEffect(() => {
-    const saved = localStorage.getItem("swara_settings")
-    if (saved) {
-      const parsed = JSON.parse(saved)
-      if (parsed.autoPunctuation !== undefined) {
-        settingsRef.current.autoPunctuation = parsed.autoPunctuation
-      }
-      if (parsed.mainLanguage) {
-        setLanguage(parsed.mainLanguage)
-      }
-    }
-  }, [])
+  const {
+    isRecording,
+    setIsRecording,
+    finalTranscript: transcript,
+    interimTranscript: interimText,
+    setFinalTranscript: setTranscript,
+    language,
+    setLanguage,
+    startRecording,
+    stopRecording,
+    clearTranscript,
+    recognitionRef
+  } = useSpeechRecognition()
 
   const containerRef = useRef<HTMLDivElement>(null)
   const transcriptRef = useRef<HTMLDivElement>(null)
@@ -48,63 +42,12 @@ export default function LiveCaptionMode() {
     }, 3000)
   }, [])
 
-  // Initialize SpeechRecognition
-  useEffect(() => {
-    if (typeof window === "undefined" || !isActive) return
-
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
-    if (!SpeechRecognition) return
-
-    const recognition = new SpeechRecognition()
-    recognition.continuous = true
-    recognition.interimResults = true
-    recognition.lang = language
-
-    recognition.onresult = (event: any) => {
-      let final = ""
-      let interim = ""
-      for (let i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) {
-          let text = event.results[i][0].transcript.trim()
-          if (settingsRef.current.autoPunctuation && text.length > 0) {
-            text = text.charAt(0).toUpperCase() + text.slice(1)
-            if (!/[.!?]$/.test(text)) text += "."
-          }
-          final += text + " "
-        } else {
-          interim += event.results[i][0].transcript
-        }
-      }
-      setTranscript(prev => prev + final)
-      setInterimText(interim)
-    }
-
-    recognition.onend = () => {
-      if (isRecordingRef.current) {
-        try { recognition.start() } catch (e) {}
-      }
-    }
-
-    recognition.onerror = (event: any) => {
-      if (event.error !== "no-speech") {
-        setIsRecording(false)
-        let errMsg = "Koneksi mikrofon terputus"
-        if (event.error === "not-allowed") errMsg = "Izin mikrofon ditolak (Periksa pengaturan browser)"
-        if (event.error === "network") errMsg = "Tidak ada koneksi internet"
-        addNotification("error", errMsg)
-      }
-    }
-
-    recognitionRef.current = recognition
-    return () => { recognition.stop() }
-  }, [language, isActive])
-
   // Auto-scroll
   useEffect(() => {
     if (transcriptRef.current) {
       transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight
     }
-  }, [transcript])
+  }, [transcript, interimText])
 
   // Fullscreen API
   const toggleFullscreen = useCallback(() => {
@@ -124,25 +67,22 @@ export default function LiveCaptionMode() {
 
   const startCaption = () => {
     setIsActive(true)
-    setIsRecording(true)
-    // Start recognition after a small delay to let useEffect create the instance
+    // The hook handles starting if isRecording is set, or we can explicitly start
     setTimeout(() => {
-      try { recognitionRef.current?.start() } catch (e) {}
+      startRecording()
     }, 200)
     resetControlsTimer()
   }
 
   const stopCaption = () => {
-    recognitionRef.current?.stop()
-    setIsRecording(false)
+    stopRecording()
     setShowControls(true)
   }
 
   const exitCaptionMode = () => {
-    recognitionRef.current?.stop()
-    setIsRecording(false)
+    stopRecording()
     setIsActive(false)
-    setTranscript("")
+    clearTranscript()
     if (document.fullscreenElement) {
       document.exitFullscreen().catch(() => {})
     }

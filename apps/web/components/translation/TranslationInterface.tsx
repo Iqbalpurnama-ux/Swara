@@ -1,11 +1,13 @@
 "use client"
 
 import { useState, useEffect, useRef, useCallback } from "react"
-import { Mic, Globe2, ArrowRightLeft, StopCircle, Copy, Trash2, Save, Star, StarOff } from "lucide-react"
+import { Mic, Globe2, ArrowRightLeft, StopCircle, Copy, Trash2, Save, Star, StarOff, Send } from "lucide-react"
 import { useUiStore } from "@/store/uiStore"
 import { saveNotification } from "@/lib/notifications"
 import { LanguageSelector } from "@/components/ui/LanguageSelector"
 import { useTranslation } from "@/lib/i18n"
+import { translateTextAction } from "@/app/actions/translate"
+import { saveHistory } from "@/app/actions/history"
 
 const FAV_STORAGE_KEY = "swara_fav_lang_pairs"
 
@@ -70,6 +72,43 @@ export default function TranslationInterface() {
   const [finalTranslated, setFinalTranslated] = useState("")
   const [interimTranslated, setInterimTranslated] = useState("")
   
+  const [inputText, setInputText] = useState("")
+
+  const handleManualTranslate = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault()
+    if (!inputText.trim()) return
+    
+    if (isRecording) {
+      toggleRecording()
+    }
+
+    const textToTranslate = inputText.trim()
+    let originalWithPunctuation = textToTranslate
+    
+    const saved = localStorage.getItem("swara_settings")
+    if (saved) {
+      const parsed = JSON.parse(saved)
+      if (parsed.autoPunctuation && textToTranslate.length > 0) {
+        originalWithPunctuation = originalWithPunctuation.charAt(0).toUpperCase() + originalWithPunctuation.slice(1)
+        if (!/[.!?]$/.test(originalWithPunctuation)) originalWithPunctuation += "."
+      }
+    }
+    
+    originalWithPunctuation += " "
+
+    setInputText("")
+    setFinalOriginal(prev => prev + originalWithPunctuation)
+    
+    try {
+      const translated = await translateText(originalWithPunctuation, sourceLang, targetLang)
+      if (translated) {
+        setFinalTranslated(prev => prev + translated + " ")
+      }
+    } catch (err) {
+      console.error(err)
+    }
+  }
+  
   const [sourceLang, setSourceLang] = useState("id-ID")
   const [targetLang, setTargetLang] = useState("en-US")
   
@@ -93,13 +132,8 @@ export default function TranslationInterface() {
   const translateText = useCallback(async (text: string, from: string, to: string) => {
     if (!text.trim()) return ""
     try {
-      const fromLang = from.split("-")[0]
-      const toLang = to.split("-")[0]
-      const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${fromLang}|${toLang}`)
-      const data = await res.json()
-      if (data?.responseData?.translatedText) {
-        return data.responseData.translatedText
-      }
+      const translated = await translateTextAction(text, from, to)
+      if (translated) return translated
     } catch (e) {
       console.error("Translation error", e)
     }
@@ -222,25 +256,25 @@ export default function TranslationInterface() {
     addNotification("success", "Dihapus")
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     const original = (finalOriginal + interimOriginal).trim()
     const translated = (finalTranslated + interimTranslated).trim()
     if (!original) return
     
-    const entry = {
-      id: Date.now(),
-      type: "Terjemah",
-      date: new Date().toISOString(),
-      original,
-      translated,
-      sourceLang,
-      targetLang,
+    try {
+      await saveHistory({
+        type: "translation",
+        originalText: original,
+        translatedText: translated,
+        sourceLanguageCode: sourceLang,
+        targetLanguageCode: targetLang,
+        label: `${sourceLang} → ${targetLang}`
+      })
+      addNotification("success", "Terjemah tersimpan!")
+      saveNotification("Terjemahan Tersimpan", "Hasil terjemahan berhasil disimpan ke riwayat.", "success")
+    } catch (e) {
+      addNotification("error", "Gagal menyimpan, pastikan Anda sudah login.")
     }
-    const existing = JSON.parse(localStorage.getItem("swara_translations") || "[]")
-    existing.push(entry)
-    localStorage.setItem("swara_translations", JSON.stringify(existing))
-    addNotification("success", "Terjemah tersimpan!")
-    saveNotification("Terjemahan Tersimpan", "Hasil terjemahan berhasil disimpan ke riwayat.", "success")
   }
 
   const applyFavPair = (pair: FavPair) => {
@@ -287,10 +321,6 @@ export default function TranslationInterface() {
               align="left"
             />
 
-            <button onClick={swapLanguages} aria-label="Tukar bahasa sumber dan target" className="w-8 h-8 shrink-0 flex items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full transition-all">
-              <ArrowRightLeft className="w-4 h-4" />
-            </button>
-
             <LanguageSelector 
               value={targetLang} 
               onChange={setTargetLang} 
@@ -302,7 +332,7 @@ export default function TranslationInterface() {
             {/* Favorite toggle */}
             <button 
               onClick={() => toggleFavorite(sourceLang, targetLang)} 
-              className={`w-10 h-10 flex items-center justify-center rounded-full transition-all ${
+              className={`w-11 h-11 flex items-center justify-center rounded-full transition-all ${
                 isFavorite(sourceLang, targetLang) 
                   ? 'text-amber-500 hover:bg-amber-50 dark:hover:bg-amber-900/30' 
                   : 'text-slate-400 dark:text-slate-500 hover:text-amber-500 hover:bg-amber-50 dark:hover:bg-amber-900/30'
@@ -312,13 +342,13 @@ export default function TranslationInterface() {
             >
               {isFavorite(sourceLang, targetLang) ? <Star className="w-4 h-4 fill-current" /> : <StarOff className="w-4 h-4" />}
             </button>
-            <button onClick={handleCopy} aria-label="Salin teks terjemah" className="w-10 h-10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full transition-all" title={t("stt.copy")}>
+            <button onClick={handleCopy} aria-label="Salin teks terjemah" className="w-11 h-11 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full transition-all" title={t("stt.copy")}>
               <Copy className="w-4 h-4" />
             </button>
-            <button onClick={handleClear} aria-label="Hapus semua teks" className="w-10 h-10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-full transition-all" title={t("stt.delete")}>
+            <button onClick={handleClear} aria-label="Hapus semua teks" className="w-11 h-11 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-full transition-all" title={t("stt.delete")}>
               <Trash2 className="w-4 h-4" />
             </button>
-            <button onClick={handleSave} aria-label="Simpan teks terjemah" className="h-10 px-5 flex items-center justify-center bg-blue-600 dark:bg-blue-500 text-white rounded-full font-bold text-sm hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all shadow-[0_4px_14px_0_rgb(37,99,235,0.39)] dark:shadow-[0_4px_14px_0_rgba(59,130,246,0.2)] ml-2">
+            <button onClick={handleSave} aria-label="Simpan teks terjemah" className="h-11 px-5 flex items-center justify-center bg-blue-600 dark:bg-blue-500 text-white rounded-full font-bold text-sm hover:bg-blue-700 dark:hover:bg-blue-600 active:scale-95 transition-all shadow-[0_4px_14px_0_rgb(37,99,235,0.39)] dark:shadow-[0_4px_14px_0_rgba(59,130,246,0.2)] ml-2">
               {t("stt.save")}
             </button>
           </div>
@@ -412,8 +442,10 @@ export default function TranslationInterface() {
         )}
       </div>
 
-      {/* Floating Microphone Action */}
-      <div className="absolute bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
+      {/* Bottom Actions: Mic & Text Input */}
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-[95%] md:max-w-2xl flex flex-col items-center gap-6">
+        
+        {/* Floating Microphone Action */}
         <div className="relative group">
           <div className={`absolute inset-0 rounded-full transition-all duration-700 ${
             isRecording 
@@ -426,20 +458,41 @@ export default function TranslationInterface() {
             aria-label={isRecording ? "Berhenti menerjemahkan" : "Mulai menerjemahkan"}
             className={`relative flex items-center justify-center transition-all duration-500 ease-out transform group-hover:scale-[1.05] active:scale-95 ${
               isRecording 
-                ? "w-24 h-24 bg-white dark:bg-slate-800 shadow-[0_10px_40px_rgba(37,99,235,0.3)] rounded-[2.5rem] border border-blue-100 dark:border-blue-500/30" 
-                : "w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-700 shadow-[0_10px_30px_rgba(37,99,235,0.4)] rounded-full border border-blue-400/30"
+                ? "w-20 h-20 md:w-24 md:h-24 bg-white dark:bg-slate-800 shadow-[0_10px_40px_rgba(37,99,235,0.3)] rounded-[2.5rem] border border-blue-100 dark:border-blue-500/30" 
+                : "w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-600 to-blue-700 shadow-[0_10px_30px_rgba(37,99,235,0.4)] rounded-full border border-blue-400/30"
             }`}
           >
             {isRecording ? (
               <div className="relative flex items-center justify-center">
                 <div className="absolute inset-0 bg-blue-100 dark:bg-blue-500/20 rounded-xl animate-ping opacity-50 scale-150"></div>
-                <div className="w-8 h-8 rounded-xl bg-blue-600 dark:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.5)]"></div>
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-xl bg-blue-600 dark:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.5)]"></div>
               </div>
             ) : (
-              <Mic className="w-8 h-8 text-white stroke-[2.5px]" />
+              <Mic className="w-6 h-6 md:w-8 md:h-8 text-white stroke-[2.5px]" />
             )}
           </button>
         </div>
+
+        {/* Text Input */}
+        <form 
+          onSubmit={handleManualTranslate}
+          className="w-full flex items-center bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border border-slate-200 dark:border-slate-700/50 shadow-[0_10px_40px_rgba(0,0,0,0.08)] rounded-full p-1.5 transition-all focus-within:ring-2 focus-within:ring-blue-500/50 focus-within:border-blue-500/50"
+        >
+          <input
+            type="text"
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+            placeholder={"Ketik teks untuk diterjemahkan..."}
+            className="flex-1 bg-transparent px-4 md:px-6 py-2 md:py-3 outline-none text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 font-medium text-sm md:text-base"
+          />
+          <button
+            type="submit"
+            disabled={!inputText.trim()}
+            className="w-11 h-11 md:w-12 md:h-12 shrink-0 flex items-center justify-center bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 dark:disabled:bg-slate-700 disabled:text-slate-400 text-white rounded-full transition-colors shadow-sm"
+          >
+            <Send className="w-4 h-4 md:w-5 md:h-5 ml-0.5" />
+          </button>
+        </form>
       </div>
 
     </div>

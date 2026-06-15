@@ -1,12 +1,10 @@
 import NextAuth from "next-auth"
 import Resend from "next-auth/providers/resend"
 import { PrismaAdapter } from "@auth/prisma-adapter"
-import { PrismaClient } from "../../../node_modules/@prisma/client"
 import { authConfig } from "./auth.config"
+import { prisma } from "./prisma"
 
 import { Resend as ResendClient } from "resend"
-
-const prisma = new PrismaClient()
 const resendClient = new ResendClient(process.env.AUTH_RESEND_KEY || process.env.RESEND_API_KEY)
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -27,9 +25,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
               <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; padding: 40px 0;">
                 <div style="max-width: 500px; margin: 0 auto; background-color: #ffffff; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; text-align: center;">
                   
-                  <div style="background-color: #2563EB; width: 64px; height: 64px; border-radius: 16px; margin: 0 auto 24px auto; display: flex; align-items: center; justify-content: center; font-size: 32px;">
-                    🎙️
-                  </div>
+
 
                   <h1 style="color: #0f172a; font-size: 24px; font-weight: bold; margin: 0 0 12px 0;">Selamat Datang di Swara</h1>
                   <p style="color: #64748b; font-size: 16px; line-height: 1.5; margin: 0 0 32px 0;">

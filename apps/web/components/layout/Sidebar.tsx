@@ -25,7 +25,7 @@ export function Sidebar({ role }: SidebarProps) {
   ]
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-[260px] bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-40 hidden md:flex">
+    <aside className="fixed left-0 top-0 h-[100dvh] w-[260px] bg-white/60 backdrop-blur-2xl dark:bg-slate-900/60 border-r border-slate-200/50 dark:border-slate-800/50 flex flex-col z-40 hidden md:flex">
       <div className="p-8 pb-4">
         <h1 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight flex items-center gap-3">
           <Image src="/logo.png" alt="Swara Logo" width={32} height={32} className="rounded-lg shadow-sm" />
@@ -38,7 +38,7 @@ export function Sidebar({ role }: SidebarProps) {
         )}
       </div>
 
-      <nav className="flex-1 px-4 space-y-1 mt-6 overflow-y-auto">
+      <nav className="flex-1 min-h-0 px-4 space-y-1 mt-6 overflow-y-auto custom-scrollbar">
         {navItems.map((item) => {
           const isActive = pathname === item.href
           const Icon = item.icon
