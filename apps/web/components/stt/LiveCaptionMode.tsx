@@ -102,7 +102,7 @@ export default function LiveCaptionMode() {
       if (e.code === "Space") {
         e.preventDefault()
         if (isRecording) stopCaption()
-        else { setIsRecording(true); setTimeout(() => { try { recognitionRef.current?.start() } catch(e){} }, 100) }
+        else { startCaption() }
       } else if (e.code === "KeyF") {
         e.preventDefault()
         toggleFullscreen()
@@ -264,7 +264,7 @@ export default function LiveCaptionMode() {
         {/* Bottom Stop Button */}
         <div className="absolute bottom-8 inset-x-0 flex justify-center">
           <button
-            onClick={isRecording ? stopCaption : () => { setIsRecording(true); setTimeout(() => { try { recognitionRef.current?.start() } catch(e){} }, 100) }}
+            onClick={isRecording ? stopCaption : startCaption}
             className="flex items-center gap-3 px-8 py-5 rounded-full font-bold text-lg transition-all active:scale-95"
             aria-label={isRecording ? "Jeda Live Caption" : "Mulai Live Caption"}
             style={{
