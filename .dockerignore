@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+.git
+.vercel
+apps/web/.next
+apps/web/node_modules
+apps/api/dist
+apps/api/node_modules
+apps/api/prisma/generated
