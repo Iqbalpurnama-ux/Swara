@@ -6,8 +6,8 @@ WORKDIR /app
 # Install openssl for Prisma
 RUN apk add --no-cache openssl
 
-# Copy package.json and lock files
-COPY package.json package-lock.json ./
+# Copy package.json
+COPY package.json ./
 COPY apps/api/package.json ./apps/api/
 COPY apps/web/package.json ./apps/web/
 
