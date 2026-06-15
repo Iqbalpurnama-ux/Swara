@@ -91,3 +91,13 @@ body {
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #475569;
 }
+
+/* Fix browser autofill styling overriding Tailwind */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #f8fafc inset !important; /* Matches bg-slate-50 */
+    -webkit-text-fill-color: #1e293b !important; /* Matches text-slate-800 */
+    transition: background-color 5000s ease-in-out 0s;
+}
