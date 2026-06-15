@@ -7,11 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npx prisma generate --schema=../api/prisma/schema.prisma"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.2",
     "@google/generative-ai": "^0.24.1",
+    "@prisma/client": "^5.22.0",
     "@tanstack/react-query": "^5.101.0",
     "clsx": "^2.1.1",
     "lucide-react": "^1.17.0",
