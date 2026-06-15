@@ -336,8 +336,8 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center text-white font-bold text-sm shadow-md">RA</div>
                 <div>
-                  <div className="text-[15px] font-bold text-slate-900">Rizky Aditya</div>
-                  <div className="text-[13px] text-slate-500 font-medium">Mahasiswa Universitas Negeri</div>
+                  <div className="text-[15px] font-bold text-slate-900">Nashati Alfarisqi</div>
+                  <div className="text-[13px] text-slate-500 font-medium">Mahasiswa Universitas Amikom Purwokerto</div>
                 </div>
               </div>
             </div>
@@ -354,7 +354,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-sm shadow-md">DS</div>
                 <div>
-                  <div className="text-[15px] font-bold text-slate-900">Dewi Sartika</div>
+                  <div className="text-[15px] font-bold text-slate-900">Renita Anjani</div>
                   <div className="text-[13px] text-slate-500 font-medium">Pemilik Usaha Kuliner</div>
                 </div>
               </div>
@@ -372,7 +372,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-orange-500 to-rose-500 flex items-center justify-center text-white font-bold text-sm shadow-md">AP</div>
                 <div>
-                  <div className="text-[15px] font-bold text-slate-900">Arif Prakoso</div>
+                  <div className="text-[15px] font-bold text-slate-900">Nila Ika Nur Alia</div>
                   <div className="text-[13px] text-slate-500 font-medium">Desainer Grafis Profesional</div>
                 </div>
               </div>
