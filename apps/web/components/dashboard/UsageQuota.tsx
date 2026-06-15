@@ -14,10 +14,10 @@ export function UsageQuota({ role = "regular" }: UsageQuotaProps) {
   const isPremium = role === "premium"
 
   // In a real app, these values would come from the server
-  const [sttUsed] = useState(15)
+  const [sttUsed] = useState(0)
   const sttLimit = 60
   
-  const [translationUsed] = useState(2500)
+  const [translationUsed] = useState(0)
   const translationLimit = 10000
 
   if (isPremium) {
