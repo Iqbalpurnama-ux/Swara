@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cd ../.. && npx prisma generate --schema=apps/api/prisma/schema.prisma && cd apps/web && next build",
+    "build": "cd ../.. && npx prisma generate --schema=apps/api/prisma/schema.prisma && cd apps/web && npm install --os=linux --cpu=x64 @tailwindcss/oxide-linux-x64-gnu --no-save && next build",
     "start": "next start",
     "lint": "eslint",
     "test": "jest"
