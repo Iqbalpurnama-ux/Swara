@@ -263,7 +263,8 @@ export default function TwoWayInterface() {
     try {
       const voice = VOICES.find(v => v.name === partnerTranslationVoice) || VOICES.find(v => v.lang === myLangRef.current)
       
-      const response = await fetch("http://localhost:3001/tts/synthesize", {
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3001";
+      const response = await fetch(`${baseUrl}/tts/synthesize`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -369,7 +370,8 @@ export default function TwoWayInterface() {
     try {
       const voice = VOICES.find(v => v.name === myVoice) || VOICES.find(v => v.lang === partnerLang)
       
-      const response = await fetch("http://localhost:3001/tts/synthesize", {
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3001";
+      const response = await fetch(`${baseUrl}/tts/synthesize`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

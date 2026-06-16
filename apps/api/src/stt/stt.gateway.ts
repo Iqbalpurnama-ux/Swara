@@ -10,9 +10,9 @@ import {
 import { Server, Socket } from 'socket.io';
 import { Logger, UseGuards } from '@nestjs/common';
 import { GoogleCloudService } from '../google-cloud/google-cloud.service';
-import { WsAuthGuard } from '../auth/ws-auth.guard';
+// import { WsAuthGuard } from '../auth/ws-auth.guard';
 
-@UseGuards(WsAuthGuard)
+// @UseGuards(WsAuthGuard)
 @WebSocketGateway({
   cors: {
     origin: '*', // In production, restrict this to frontend URL

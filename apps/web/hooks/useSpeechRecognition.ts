@@ -44,7 +44,6 @@ export function useSpeechRecognition(options?: UseSpeechRecognitionOptions) {
   useEffect(() => {
     // Initialize Socket.io client
     socketRef.current = io(process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3001", {
-      withCredentials: true,
       transports: ['websocket'],
     })
 
