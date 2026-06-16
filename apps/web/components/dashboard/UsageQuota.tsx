@@ -1,9 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Activity, Sparkles, Zap, ShieldCheck } from "lucide-react"
 import { useTranslation } from "@/lib/i18n"
+import { getUsageStats } from "@/app/actions/history"
 
 interface UsageQuotaProps {
   role?: string
@@ -13,12 +14,27 @@ export function UsageQuota({ role = "regular" }: UsageQuotaProps) {
   const { t } = useTranslation()
   const isPremium = role === "premium"
 
-  // In a real app, these values would come from the server
-  const [sttUsed] = useState(0)
-  const sttLimit = 60
+  const [sttUsed, setSttUsed] = useState(0)
+  const sttLimit = 60 // 60 menit per bulan
   
-  const [translationUsed] = useState(0)
-  const translationLimit = 10000
+  const [translationUsed, setTranslationUsed] = useState(0)
+  const translationLimit = 10000 // 10.000 karakter per bulan
+
+  useEffect(() => {
+    async function loadStats() {
+      try {
+        const stats = await getUsageStats()
+        setSttUsed(stats.sttUsed)
+        setTranslationUsed(stats.translationUsed)
+      } catch (e) {
+        console.error("Gagal memuat statistik", e)
+      }
+    }
+    
+    if (!isPremium) {
+      loadStats()
+    }
+  }, [isPremium])
 
   if (isPremium) {
     return (

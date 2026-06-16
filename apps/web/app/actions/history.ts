@@ -72,3 +72,29 @@ export async function deleteAllHistory() {
     where: { userId: session.user.id }
   })
 }
+
+export async function getUsageStats() {
+  const session = await auth()
+  if (!session?.user?.id) return { sttUsed: 0, translationUsed: 0 }
+
+  const history = await prisma.history.findMany({
+    where: { userId: session.user.id }
+  })
+
+  let sttSeconds = 0
+  let translationChars = 0
+
+  for (const item of history) {
+    if (item.type === 'stt' || item.type === 'conversation') {
+      sttSeconds += (item.durationSeconds || 0)
+    } else if (item.type === 'translation') {
+      translationChars += (item.originalText?.length || 0)
+    }
+  }
+
+  return {
+    sttUsed: Math.ceil(sttSeconds / 60), // konversi ke menit
+    translationUsed: translationChars
+  }
+}
+

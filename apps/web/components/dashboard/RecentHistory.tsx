@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { History as HistoryIcon } from "lucide-react"
 import { useTranslation } from "@/lib/i18n"
+import { getHistory } from "@/app/actions/history"
 
 export function RecentHistory() {
   const { t } = useTranslation()
@@ -11,50 +12,19 @@ export function RecentHistory() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    try {
-      const translations = JSON.parse(localStorage.getItem("swara_translations") || "[]")
-      const dictations = JSON.parse(localStorage.getItem("swara_dictations") || "[]")
-      const conversations = JSON.parse(localStorage.getItem("swara_conversations") || "[]")
-
-      const formattedTranslations = translations.map((t: any) => ({
-        id: t.id,
-        type: "translation",
-        originalText: t.original,
-        sourceLanguageCode: `${t.sourceLang} → ${t.targetLang}`,
-        createdAt: t.date,
-      }))
-
-      const formattedDictations = dictations.map((d: any) => ({
-        id: d.id,
-        type: "stt",
-        originalText: d.text,
-        sourceLanguageCode: "Dikte",
-        createdAt: d.date,
-      }))
-
-      const formattedConversations = conversations.map((c: any) => {
-        const textPreview = c.log && c.log.length > 0 
-          ? c.log.map((l: any) => `${l.speaker}: ${l.text}`).join(' | ') 
-          : "Sesi Percakapan Kosong"
-        return {
-          id: c.id,
-          type: "stt",
-          originalText: textPreview,
-          sourceLanguageCode: "2 Arah",
-          createdAt: c.date,
-        }
-      })
-
-      const combined = [...formattedTranslations, ...formattedDictations, ...formattedConversations]
-        .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-        .slice(0, 5)
-      
-      setData(combined)
-    } catch (e) {
-      console.error("Error loading history", e)
-    } finally {
-      setIsLoading(false)
+    async function loadHistory() {
+      try {
+        const historyData = await getHistory()
+        // Ambil 5 riwayat terbaru saja untuk beranda
+        setData(historyData.slice(0, 5))
+      } catch (e) {
+        console.error("Error loading history", e)
+      } finally {
+        setIsLoading(false)
+      }
     }
+    
+    loadHistory()
   }, [])
 
   return (
@@ -101,19 +71,19 @@ export function RecentHistory() {
               key={item.id}
               className="flex items-center gap-4 p-3 rounded-xl hover:bg-[#F8FAFC] dark:hover:bg-slate-700/50 transition-colors border border-transparent hover:border-[#E2E8F0] dark:hover:border-slate-600"
             >
-              <div className={`px-2 py-1 rounded text-xs font-bold ${
+              <div className={`px-2 py-1 rounded text-xs font-bold uppercase ${
                 item.type === 'stt' ? 'bg-[#DBEAFE] dark:bg-blue-900/30 text-[#1D4ED8] dark:text-blue-400' : 
                 item.type === 'tts' ? 'bg-[#E2E8F0] dark:bg-slate-700 text-[#0F172A] dark:text-slate-300' : 
                 'bg-[#FFEDD5] dark:bg-orange-900/30 text-[#9A3A00] dark:text-orange-400'
               }`}>
-                {item.type.toUpperCase()}
+                {item.type}
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-[#0F172A] dark:text-white font-medium truncate">
-                  {item.originalText}
+                  {item.label || item.originalText}
                 </p>
                 <div className="flex items-center gap-2 text-xs text-[#94A3B8] dark:text-slate-400 mt-1">
-                  <span>{item.sourceLanguageCode}</span>
+                  <span>{item.sourceLanguageCode || "Sistem"}</span>
                   <span>•</span>
                   <span>{new Date(item.createdAt).toLocaleDateString("id-ID")}</span>
                 </div>
@@ -125,3 +95,4 @@ export function RecentHistory() {
     </div>
   )
 }
+

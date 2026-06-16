@@ -1,14 +1,38 @@
 "use client"
 
-import { Check, Zap, ShieldCheck, ArrowRight, Sparkles } from "lucide-react"
+import { useState } from "react"
+import { Check, Zap, ShieldCheck, ArrowRight, Sparkles, X, CreditCard, Loader2 } from "lucide-react"
 import { useUiStore } from "@/store/uiStore"
+import { upgradeUserToPremium } from "@/app/actions/user"
+import { useRouter } from "next/navigation"
 
 export default function PremiumUpgradeFlow() {
   const { triggerFlash } = useUiStore()
+  const router = useRouter()
+  
+  const [showModal, setShowModal] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState("")
+  const [price, setPrice] = useState("")
+  const [isProcessing, setIsProcessing] = useState(false)
 
-  const handleSubscribe = (plan: string) => {
-    triggerFlash("success", `Memproses pembayaran untuk paket ${plan}...`)
-    // Di aplikasi nyata, ini akan redirect ke Stripe Checkout atau Midtrans
+  const handleSubscribe = (plan: string, planPrice: string) => {
+    setSelectedPlan(plan)
+    setPrice(planPrice)
+    setShowModal(true)
+  }
+
+  const handlePayment = async () => {
+    setIsProcessing(true)
+    try {
+      await upgradeUserToPremium()
+      triggerFlash("success", `Pembayaran berhasil! Akun Anda kini Premium.`)
+      setShowModal(false)
+      // Reload the page to reflect the new session role
+      window.location.href = "/dashboard"
+    } catch (error) {
+      triggerFlash("error", "Terjadi kesalahan saat memproses pembayaran.")
+      setIsProcessing(false)
+    }
   }
 
   return (
@@ -23,7 +47,7 @@ export default function PremiumUpgradeFlow() {
         </p>
       </div>
 
-      {/* Pricing Cards - 3 Column Grid from Landing Page */}
+      {/* Pricing Cards */}
       <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
         {/* Free Plan */}
@@ -76,7 +100,7 @@ export default function PremiumUpgradeFlow() {
           </div>
           
           <button 
-            onClick={() => handleSubscribe('Bulanan')}
+            onClick={() => handleSubscribe('Premium Bulanan', 'Rp 49.000')}
             className="block text-center w-full py-4 rounded-[1.25rem] text-[15px] font-bold bg-[#2563EB] hover:bg-blue-700 text-white transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:-translate-y-0.5 mt-auto relative z-10"
           >
             Berlangganan Bulanan
@@ -108,14 +132,90 @@ export default function PremiumUpgradeFlow() {
           </div>
           
           <button 
-            onClick={() => handleSubscribe('Tahunan')}
+            onClick={() => handleSubscribe('Premium Tahunan', 'Rp 399.000')}
             className="block text-center w-full py-4 rounded-[1.25rem] text-[15px] font-bold bg-[#BC4800] hover:bg-[#9c3c00] text-white transition-all shadow-[0_4px_14px_rgba(188,72,0,0.3)] hover:-translate-y-0.5 mt-auto relative z-10"
           >
             Berlangganan Tahunan
           </button>
         </div>
-
       </div>
+
+      {/* Mock Payment Gateway Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+          <div className="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200">
+            {/* Modal Header */}
+            <div className="bg-slate-50 dark:bg-slate-800/50 p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/50 rounded-full flex items-center justify-center">
+                  <CreditCard className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 dark:text-white">Pembayaran Aman</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Simulator Payment Gateway</p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setShowModal(false)}
+                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-400 transition-colors"
+                disabled={isProcessing}
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6">
+              <div className="bg-indigo-50/50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-900/30 rounded-2xl p-5 mb-6">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Paket</span>
+                  <span className="font-bold text-slate-900 dark:text-white">{selectedPlan}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Total Pembayaran</span>
+                  <span className="text-xl font-extrabold text-indigo-600 dark:text-indigo-400">{price}</span>
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-8">
+                <p className="text-sm text-slate-500 dark:text-slate-400 text-center">
+                  Pilih metode pembayaran (Demo Mode):
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  <button className="border-2 border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-3 text-sm font-bold text-indigo-700 dark:text-indigo-400 flex flex-col items-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1200px-Gopay_logo.svg.png" alt="Gopay" className="h-4 object-contain brightness-0 dark:invert opacity-70" />
+                    GoPay
+                  </button>
+                  <button className="border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 rounded-xl p-3 text-sm font-bold text-slate-600 dark:text-slate-400 flex flex-col items-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/OVO_logo.svg/1200px-OVO_logo.svg.png" alt="OVO" className="h-4 object-contain brightness-0 dark:invert opacity-70" />
+                    OVO
+                  </button>
+                </div>
+              </div>
+
+              <button 
+                onClick={handlePayment}
+                disabled={isProcessing}
+                className="w-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+              >
+                {isProcessing ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Memproses...
+                  </>
+                ) : (
+                  <>Bayar Sekarang</>
+                )}
+              </button>
+              
+              <p className="text-xs text-center text-slate-400 mt-4">
+                Ini adalah lingkungan simulasi/demo. Tidak ada uang sungguhan yang akan ditarik.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
+
