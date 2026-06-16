@@ -20,9 +20,10 @@ interface LanguageSelectorProps {
   value: string
   onChange: (value: string) => void
   align?: "left" | "right" | "center"
+  direction?: "down" | "up"
 }
 
-export function LanguageSelector({ value, onChange, align = "center" }: LanguageSelectorProps) {
+export function LanguageSelector({ value, onChange, align = "center", direction = "down" }: LanguageSelectorProps) {
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -38,7 +39,7 @@ export function LanguageSelector({ value, onChange, align = "center" }: Language
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  let dropdownClasses = "absolute top-full mt-2 w-48 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl border border-slate-200 dark:border-slate-700 shadow-[0_10px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden z-[100] py-1 transition-all duration-200"
+  let dropdownClasses = `absolute ${direction === "up" ? "bottom-full mb-2" : "top-full mt-2"} w-48 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl border border-slate-200 dark:border-slate-700 shadow-[0_10px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden z-[100] py-1 transition-all duration-200`
   if (align === "left") dropdownClasses += " left-0"
   else if (align === "right") dropdownClasses += " right-0"
   else dropdownClasses += " left-1/2 -translate-x-1/2"

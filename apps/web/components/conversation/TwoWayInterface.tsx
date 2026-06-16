@@ -495,7 +495,7 @@ export default function TwoWayInterface() {
   }, [handleDrag, handleDragEnd])
 
   return (
-    <div ref={containerRef} className="flex flex-col h-full w-full max-w-5xl mx-auto md:p-6 z-10 overflow-hidden relative">
+    <div ref={containerRef} className="flex flex-col h-full w-full max-w-5xl mx-auto md:p-6 z-10 relative">
       
       {/* Top Panel: Lawan Bicara (STT) */}
       <div 
@@ -623,9 +623,9 @@ export default function TwoWayInterface() {
                 <div className={`w-2 h-2 rounded-full bg-white ${isPlaying ? 'animate-pulse' : ''}`}></div>
                 {t("conv.you")}
               </div>
-              <LanguageSelector value={myLang} onChange={setMyLang} align="left" />
+              <LanguageSelector value={myLang} onChange={setMyLang} align="left" direction="up" />
               <div className="h-4 w-px bg-slate-200 dark:bg-slate-700 mx-1 shrink-0"></div>
-              <VoiceSelector languageCode={partnerLang} value={myVoice} onChange={setMyVoice} align="left" />
+              <VoiceSelector languageCode={partnerLang} value={myVoice} onChange={setMyVoice} align="left" direction="up" />
             </div>
             <div className="flex items-center flex-wrap gap-2 md:gap-3 shrink-0">
             <button onClick={handleSaveSession} aria-label="Simpan riwayat percakapan" className="w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-slate-700/80 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shadow-sm" title="Simpan Sesi">
