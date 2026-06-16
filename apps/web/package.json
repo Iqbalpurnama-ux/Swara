@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cd ../.. && npx prisma generate --schema=apps/api/prisma/schema.prisma && cd apps/web && next build",
+    "build": "node build.js",
     "start": "next start",
     "lint": "eslint",
     "test": "jest"
