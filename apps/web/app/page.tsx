@@ -334,7 +334,7 @@ export default function Home() {
                 "Sangat membantu saat mengikuti kelas di kampus. Saya tidak lagi kesulitan menangkap penjelasan dosen, cukup meletakkan Swara di meja dan membaca teksnya dengan fokus."
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center text-white font-bold text-sm shadow-md">RA</div>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center text-white font-bold text-sm shadow-md">NAS</div>
                 <div>
                   <div className="text-[15px] font-bold text-slate-900">Nashati Alfarisqi</div>
                   <div className="text-[13px] text-slate-500 font-medium">Mahasiswa Universitas Amikom Purwokerto</div>
@@ -352,7 +352,7 @@ export default function Home() {
                 "Fitur layar dua arahnya sangat luar biasa. Saya menggunakannya di toko; pembeli berbicara dan teksnya muncul, lalu saya membalas dengan mengetik untuk disuarakan secara otomatis."
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-sm shadow-md">DS</div>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-sm shadow-md">RE</div>
                 <div>
                   <div className="text-[15px] font-bold text-slate-900">Renita Anjani</div>
                   <div className="text-[13px] text-slate-500 font-medium">Pemilik Usaha Kuliner</div>
@@ -370,7 +370,7 @@ export default function Home() {
                 "Akurasi penangkapan kata dalam bahasa Indonesia sangat mengagumkan. Bahkan di lingkungan yang cukup bising seperti stasiun, aplikasi ini tetap menerjemahkan ucapan dengan tepat."
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-orange-500 to-rose-500 flex items-center justify-center text-white font-bold text-sm shadow-md">AP</div>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-orange-500 to-rose-500 flex items-center justify-center text-white font-bold text-sm shadow-md">NI</div>
                 <div>
                   <div className="text-[15px] font-bold text-slate-900">Nila Ika Nur Alia</div>
                   <div className="text-[13px] text-slate-500 font-medium">Desainer Grafis Profesional</div>
