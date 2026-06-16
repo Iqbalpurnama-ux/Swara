@@ -1,17 +1,33 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { UserCircle, Mail, Shield, CheckCircle2, Zap, Camera, Phone, Calendar, Key, Lock, Bell } from "lucide-react"
+import { useSession } from "next-auth/react"
+import { UserCircle, Mail, Shield, CheckCircle2, Zap, Camera, Calendar, Lock, Bell } from "lucide-react"
 
 export default function ProfilePage() {
+  const { data: session, status } = useSession()
   const [activeTab, setActiveTab] = useState("data-diri")
   const [profileImage, setProfileImage] = useState<string | null>(null)
+  const [name, setName] = useState("")
+  const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState("")
   const fileInputRef = useRef<HTMLInputElement>(null)
 
+  // Load avatar from localStorage and sync session data
   useEffect(() => {
     const saved = localStorage.getItem("swara_avatar")
     if (saved) setProfileImage(saved)
   }, [])
+
+  // Sync name from session
+  useEffect(() => {
+    if (session?.user?.name) {
+      setName(session.user.name)
+    }
+    if (session?.user?.image && !localStorage.getItem("swara_avatar")) {
+      setProfileImage(session.user.image)
+    }
+  }, [session])
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -33,8 +49,28 @@ export default function ProfilePage() {
     window.dispatchEvent(new Event("avatarUpdated"))
   }
 
+  const handleSave = () => {
+    // Save name to localStorage for now
+    localStorage.setItem("swara_profile_name", name)
+    setToastMessage("Perubahan berhasil disimpan!")
+    setShowToast(true)
+    setTimeout(() => setShowToast(false), 3000)
+  }
+
+  const userEmail = session?.user?.email || ""
+  const userImage = session?.user?.image || null
+
   return (
     <div className="max-w-[1200px] mx-auto p-4 md:p-8 relative z-10 pb-20">
+
+      {/* Toast Notification */}
+      {showToast && (
+        <div className="fixed top-8 right-8 bg-white dark:bg-slate-800 border border-emerald-100 dark:border-emerald-900/50 shadow-xl rounded-xl p-4 flex items-center gap-3 z-50 animate-in slide-in-from-top-4">
+          <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+          <span className="font-bold text-slate-800 dark:text-white text-sm">{toastMessage}</span>
+        </div>
+      )}
+
       <div className="mb-10">
         <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-3">
           <UserCircle className="w-8 h-8 text-indigo-600 dark:text-indigo-400" /> Profil Pengguna
@@ -108,6 +144,8 @@ export default function ProfilePage() {
                     <div className="w-32 h-32 rounded-full border-4 border-white dark:border-slate-800 shadow-lg flex items-center justify-center overflow-hidden bg-gradient-to-tr from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800">
                       {profileImage ? (
                         <img src={profileImage} alt="Profile" className="w-full h-full object-cover" />
+                      ) : userImage ? (
+                        <img src={userImage} alt="Profile" className="w-full h-full object-cover" />
                       ) : (
                         <UserCircle className="w-16 h-16 text-slate-400 dark:text-slate-500" />
                       )}
@@ -153,24 +191,28 @@ export default function ProfilePage() {
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Nama Lengkap</label>
                     <div className="relative">
                       <UserCircle className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-                      <input type="text" defaultValue="Moch. Iqbal Purnama" className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-800 dark:text-white outline-none focus:border-indigo-500 dark:focus:border-indigo-400 transition-colors" />
+                      <input 
+                        type="text" 
+                        value={name} 
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Masukkan nama lengkap"
+                        className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-800 dark:text-white outline-none focus:border-indigo-500 dark:focus:border-indigo-400 transition-colors" 
+                      />
                     </div>
                   </div>
                   <div>
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Alamat Email</label>
                     <div className="relative">
                       <Mail className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-                      <input type="email" disabled defaultValue="pengguna@swara.app" className="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-500 dark:text-slate-500 cursor-not-allowed" />
-                      <CheckCircle2 className="absolute right-4 top-3.5 w-5 h-5 text-emerald-500" />
+                      <input 
+                        type="email" 
+                        disabled 
+                        value={userEmail}
+                        className="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-500 dark:text-slate-500 cursor-not-allowed" 
+                      />
+                      {userEmail && <CheckCircle2 className="absolute right-4 top-3.5 w-5 h-5 text-emerald-500" />}
                     </div>
                     <p className="text-[11px] text-slate-400 mt-1.5 font-medium">Email telah diverifikasi dan tidak dapat diubah.</p>
-                  </div>
-                  <div>
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Nomor Telepon</label>
-                    <div className="relative">
-                      <Phone className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-                      <input type="tel" placeholder="+62 812 3456 7890" className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-800 dark:text-white outline-none focus:border-indigo-500 dark:focus:border-indigo-400 transition-colors" />
-                    </div>
                   </div>
                   <div>
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Tanggal Lahir</label>
@@ -186,7 +228,10 @@ export default function ProfilePage() {
                 </div>
 
                 <div className="flex justify-end">
-                  <button className="bg-indigo-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/20 hover:bg-indigo-700 hover:-translate-y-0.5 transition-all">
+                  <button 
+                    onClick={handleSave}
+                    className="bg-indigo-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/20 hover:bg-indigo-700 hover:-translate-y-0.5 transition-all"
+                  >
                     Simpan Perubahan
                   </button>
                 </div>
@@ -197,31 +242,14 @@ export default function ProfilePage() {
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <h2 className="text-2xl font-extrabold text-slate-800 dark:text-white mb-8 border-b border-slate-100 dark:border-slate-700 pb-6">Keamanan Akun</h2>
                 
-                <div className="space-y-6 max-w-md">
-                  <div>
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Password Saat Ini</label>
-                    <div className="relative">
-                      <Key className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-                      <input type="password" placeholder="••••••••" className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-800 dark:text-white outline-none focus:border-indigo-500 dark:focus:border-indigo-400 transition-colors" />
-                    </div>
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-900/50 rounded-2xl p-6 mb-8">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <span className="font-bold text-blue-800 dark:text-blue-300">Metode Login Anda</span>
                   </div>
-                  <div>
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Password Baru</label>
-                    <div className="relative">
-                      <Lock className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-                      <input type="password" placeholder="Minimal 8 karakter" className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-800 dark:text-white outline-none focus:border-indigo-500 dark:focus:border-indigo-400 transition-colors" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Konfirmasi Password Baru</label>
-                    <div className="relative">
-                      <Lock className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-                      <input type="password" placeholder="Ulangi password baru" className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-12 pr-4 font-semibold text-slate-800 dark:text-white outline-none focus:border-indigo-500 dark:focus:border-indigo-400 transition-colors" />
-                    </div>
-                  </div>
-                  <button className="mt-4 bg-indigo-600 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:bg-indigo-700 transition-colors">
-                    Update Password
-                  </button>
+                  <p className="text-sm text-blue-700 dark:text-blue-400 font-medium">
+                    {session?.user?.email ? `Anda masuk menggunakan akun ${userEmail}. Keamanan akun Anda dikelola oleh penyedia autentikasi (Google / Magic Link).` : "Memuat informasi akun..."}
+                  </p>
                 </div>
               </div>
             )}
