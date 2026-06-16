@@ -502,9 +502,9 @@ export default function TwoWayInterface() {
         className="flex flex-col bg-blue-50/90 dark:bg-slate-900/90 backdrop-blur-xl md:rounded-t-[3rem] border-b-4 border-blue-600 dark:border-blue-500 relative z-30 transition-all duration-300"
         style={{ flex: `${topRatio} 0 0` }}
       >
-        <div className="absolute top-0 left-0 w-full px-4 pt-4 pb-2 z-20 overflow-x-auto custom-scrollbar">
-          <div className="flex items-center md:justify-between gap-6 min-w-max">
-            <div className="flex items-center gap-2 shrink-0">
+        <div className="w-full px-4 pt-4 pb-2 z-40 flex-shrink-0">
+          <div className="flex flex-wrap items-center justify-between gap-3 md:gap-6">
+            <div className="flex items-center flex-wrap gap-2 shrink-0">
               <div className={`hidden md:flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md`}>
                 <div className={`w-2 h-2 rounded-full ${isListening ? 'bg-white animate-pulse' : 'bg-blue-300'}`}></div>
                 {t("conv.partner")}
@@ -514,7 +514,7 @@ export default function TwoWayInterface() {
               <VoiceSelector languageCode={myLang} value={partnerTranslationVoice} onChange={setPartnerTranslationVoice} align="left" />
             </div>
             
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center flex-wrap gap-2 md:gap-3 shrink-0">
             <button 
               onClick={() => setAutoPlayTranslation(!autoPlayTranslation)}
               className={`h-8 px-3 rounded-full text-xs font-bold transition-all whitespace-nowrap ${
@@ -553,7 +553,7 @@ export default function TwoWayInterface() {
           </div>
         </div>
 
-        <div ref={partnerAreaRef} className="flex-1 overflow-y-auto p-8 pt-24 pb-8 flex flex-col justify-end custom-scrollbar md:rounded-t-[3rem]" aria-live="polite" role="region" aria-label="Teks Lawan Bicara">
+        <div ref={partnerAreaRef} className="flex-1 overflow-y-auto p-4 md:p-8 flex flex-col justify-end custom-scrollbar md:rounded-t-[3rem]" aria-live="polite" role="region" aria-label="Teks Lawan Bicara">
           {partnerMessages.length === 0 && !isListening && !interimText ? (
              <div className="text-center text-blue-300 dark:text-slate-500 font-medium my-auto">{t("conv.press_mic")}</div>
           ) : (
@@ -616,9 +616,9 @@ export default function TwoWayInterface() {
         className="flex flex-col bg-white dark:bg-slate-800 md:rounded-b-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.08)] relative z-20 border border-slate-100 dark:border-slate-700/50"
         style={{ flex: `${100 - topRatio} 0 0` }}
       >
-        <div className="absolute top-0 left-0 w-full px-4 pt-4 pb-2 z-20 overflow-x-auto custom-scrollbar">
-          <div className="flex items-center md:justify-between gap-6 min-w-max">
-            <div className="flex items-center gap-2 shrink-0">
+        <div className="w-full px-4 pt-4 pb-2 z-40 flex-shrink-0">
+          <div className="flex flex-wrap items-center justify-between gap-3 md:gap-6">
+            <div className="flex items-center flex-wrap gap-2 shrink-0">
               <div className={`hidden md:flex items-center gap-2 bg-green-500 dark:bg-green-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md`}>
                 <div className={`w-2 h-2 rounded-full bg-white ${isPlaying ? 'animate-pulse' : ''}`}></div>
                 {t("conv.you")}
@@ -627,7 +627,7 @@ export default function TwoWayInterface() {
               <div className="h-4 w-px bg-slate-200 dark:bg-slate-700 mx-1 shrink-0"></div>
               <VoiceSelector languageCode={partnerLang} value={myVoice} onChange={setMyVoice} align="left" />
             </div>
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center flex-wrap gap-2 md:gap-3 shrink-0">
             <button onClick={handleSaveSession} aria-label="Simpan riwayat percakapan" className="w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-slate-700/80 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shadow-sm" title="Simpan Sesi">
               <Save className="w-4 h-4" />
             </button>
@@ -638,7 +638,7 @@ export default function TwoWayInterface() {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col p-6 pt-24 md:rounded-b-[3rem]">
+        <div className="flex-1 flex flex-col p-4 md:p-6 md:rounded-b-[3rem]">
           <textarea
             value={myText}
             onChange={(e) => setMyText(e.target.value)}
