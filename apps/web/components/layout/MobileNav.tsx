@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Mic, Volume2, History, Globe2 } from "lucide-react"
+import { Home, Mic, Volume2, History, Globe2, Languages } from "lucide-react"
 
 export function MobileNav() {
   const pathname = usePathname()
@@ -11,6 +11,7 @@ export function MobileNav() {
     { label: "Home", href: "/dashboard", icon: Home },
     { label: "STT", href: "/stt", icon: Mic },
     { label: "TTS", href: "/tts", icon: Volume2 },
+    { label: "Percakapan", href: "/conversation", icon: Languages },
     { label: "Riwayat", href: "/history", icon: History },
     { label: "Terjemah", href: "/translation", icon: Globe2 },
   ]

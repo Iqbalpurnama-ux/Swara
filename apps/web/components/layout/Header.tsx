@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Bell, Globe2, UserCircle, LogOut, Settings, ChevronDown, CheckCircle2, AlertCircle, Info } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { signOut } from "next-auth/react"
 import { AppNotification, getNotifications, markAllNotificationsRead } from "@/lib/notifications"
 import { useTranslation } from "@/lib/i18n"
@@ -189,12 +190,12 @@ export function Header({ userName, language = "id-ID" }: HeaderProps) {
                 <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Batas 30 menit tersisa</div>
               </div>
               <div className="flex flex-col">
-                <button className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-semibold transition-colors w-full text-left">
+                <Link href="/profile" className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-semibold transition-colors w-full text-left">
                   <UserCircle className="w-4 h-4 text-gray-400 dark:text-gray-500" /> {t("header.profile")}
-                </button>
-                <button className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-semibold transition-colors w-full text-left">
+                </Link>
+                <Link href="/settings" className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-semibold transition-colors w-full text-left">
                   <Settings className="w-4 h-4 text-gray-400 dark:text-gray-500" /> {t("header.settings")}
-                </button>
+                </Link>
                 <div className="h-px bg-gray-100 dark:bg-slate-700 my-2"></div>
                 <button 
                   onClick={() => signOut({ callbackUrl: "/login" })}

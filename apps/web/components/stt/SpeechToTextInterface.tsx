@@ -134,10 +134,13 @@ export default function SpeechToTextInterface() {
         </div>
       </div>
 
+      {/* Gradient mask to fade out text at the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-slate-900 dark:via-slate-900/80 dark:to-transparent z-20 pointer-events-none"></div>
+
       {/* Main Content Area */}
       <div 
         ref={transcriptAreaRef}
-        className="flex-1 overflow-y-auto px-6 md:px-16 pt-32 pb-48 relative z-10 scroll-smooth w-full max-w-5xl mx-auto flex flex-col"
+        className="flex-1 overflow-y-auto px-6 md:px-16 pt-32 pb-[250px] md:pb-48 relative z-10 scroll-smooth w-full max-w-5xl mx-auto flex flex-col"
       >
         {finalTranscript === "" && interimTranscript === "" ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center">
