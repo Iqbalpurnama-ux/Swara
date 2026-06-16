@@ -71,8 +71,8 @@ model History {
   originalText       String   @db.Text
   translatedText     String?  @db.Text
   summaryContent     String?  @db.Text
-  type               String   @db.VarChar(10) // 'stt', 'tts', 'conversation'
-  label              String?  @db.VarChar(50)
+  type               String   @db.VarChar(20) // 'stt', 'tts', 'conversation'
+  label              String?  @db.VarChar(255)
   durationSeconds    Int      @default(0)
   voiceId            String?  @db.VarChar(100)
   createdAt          DateTime @default(now())
