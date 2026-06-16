@@ -16,7 +16,7 @@
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
-| **Versi Dokumen** | `2.0.0` (Upgraded — Sonic Clarity Design System) |
+| **Versi Dokumen** | `2.1.0` (Updated Architecture & Phase 5 Readiness) |
 | --- | --- |
 | **Berdasarkan Blueprint** | Swara Blueprint v2.0.0 |
 | **Tanggal** | 10 Juni 2026 |
@@ -515,7 +515,7 @@ icon ✨ + label "SmartNote AI" text-[#2563EB] font-semibold
 | Mobile | Flutter (primary) | Single codebase iOS+Android, performa native, widget aksesibel |
 | Backend API | Node.js + NestJS (modular architecture) + TypeScript | Decorator-based, mudah scaling, type-safe |
 | Real-time | Socket.io + WebRTC + Redis (Pub/Sub) | STT streaming; WebRTC untuk audio P2P; Redis untuk session state |
-| AI — STT | OpenAI Whisper API | Akurasi tinggi multi-bahasa, mendukung audio streaming |
+| AI — STT | OpenAI Whisper API | Akurasi tinggi multi-bahasa, pseudo-streaming via chunking |
 | AI — Translation | Google Cloud Translation API v3 | Neural Machine Translation, 100+ bahasa |
 | AI — Summary | GPT-4o-mini | Cost-efficient untuk summarization, context window 128k token |
 | TTS — Standar | Web Speech API (browser) | Zero-cost, cukup untuk Regular Plan |
@@ -542,7 +542,7 @@ icon ✨ + label "SmartNote AI" text-[#2563EB] font-semibold
       │
       ├─── [Redis] ← simpan session state, kuota timer
       │
-      │  audio WAV buffer
+      │  akumulasi audio buffer (chunking per 2-3 detik)
       ▼
   [OpenAI Whisper API]
       │
@@ -797,7 +797,7 @@ Progress: stepper dots di bawah — active: bg-[#2563EB], inactive: bg-[#E2E8F0]
 | 🔴 Fase 2: Core Engine | Minggu 3–4 | WebSocket STT, Whisper, TTS streaming | Endpoint STT & TTS berfungsi, unit test | Backend + Frontend |
 | 🟠 Fase 3: Aksesibilitas & Multi | Minggu 5–6 | Multilingual, Gesture, 2-Way Conversation | Fitur translasi live, gesture aktif, split-screen UI | Full Stack + Mobile |
 | 🟡 Fase 4: Monetisasi & AI | Minggu 7–8 | Stripe/Midtrans, SmartNote, Cloud Sync | Alur upgrade end-to-end, summary AI, cloud backup | Backend + DevOps |
-| 🟢 Fase 5: QA & Launch | Minggu 9–10 | Stress test, beta, bug fix, release | Laporan QA, APK/IPA, Web Production URL | QA Lead + All Team |
+| ✅ Fase 5: QA & Launch | Minggu 9–10 | Stress test, beta, bug fix, release | Laporan QA, APK/IPA, Web Production URL | SELESAI |
 
 ### 11.1 Definition of Done (DoD) per Fase
 
