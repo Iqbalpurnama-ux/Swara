@@ -1,12 +1,8 @@
 import path from "path";
-import { fileURLToPath } from "url";
 import type { NextConfig } from "next";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 const nextConfig: NextConfig = {
-  outputFileTracingRoot: path.join(__dirname, "../../"),
+  outputFileTracingRoot: path.join(/*turbopackIgnore: true*/ process.cwd(), "../../"),
   serverExternalPackages: ["@prisma/client", "prisma"],
 };
 
