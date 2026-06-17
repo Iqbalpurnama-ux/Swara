@@ -21,6 +21,9 @@ export const authConfig = {
         if (session.onboardingCompleted !== undefined) {
           token.onboardingCompleted = session.onboardingCompleted
         }
+        if (session.role !== undefined) {
+          token.role = session.role
+        }
       }
       return token
     },

@@ -7,6 +7,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useTranslation } from "@/lib/i18n"
 import { getHistory, deleteHistory, updateHistorySummary } from "@/app/actions/history"
+import { useSession } from "next-auth/react"
 
 // Mock Data structure based on Prisma History model
 type HistoryItem = { 
@@ -22,7 +23,7 @@ type HistoryItem = {
 }
 const INITIAL_HISTORY: HistoryItem[] = []
 
-export default function HistoryManager() {
+export default function HistoryManager({ isPremium = false }: { isPremium?: boolean }) {
   const { t } = useTranslation()
   const [searchTerm, setSearchTerm] = useState("")
   const [history, setHistory] = useState<HistoryItem[]>([])
@@ -30,7 +31,8 @@ export default function HistoryManager() {
   const [generatingId, setGeneratingId] = useState<string | null>(null)
   const { triggerFlash, addNotification } = useUiStore()
   const router = useRouter()
-  const isPremiumUser = false // Mock status berlangganan (false = Reguler)
+  const { data: session } = useSession()
+  const isPremiumUser = isPremium
 
   useEffect(() => {
     async function fetchHistory() {

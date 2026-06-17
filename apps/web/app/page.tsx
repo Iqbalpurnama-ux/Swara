@@ -404,7 +404,7 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col gap-4 mb-10 flex-1">
-                {['Maksimal 30 menit per sesi', 'Batas 1.000 karakter translasi/hari', '3 Preset suara natural', 'Riwayat disimpan lokal', '100% bebas iklan'].map((feat, i) => (
+                {['Maksimal 60 menit per sesi STT', 'Batas 5.000 karakter TTS/hari', 'Akses Pro AI WebSocket', 'Riwayat disimpan lokal', '100% bebas iklan'].map((feat, i) => (
                   <div key={i} className="flex items-start gap-4 text-[14px] font-bold text-slate-700">
                     <div className="w-5 h-5 rounded-full bg-white text-slate-500 flex items-center justify-center shrink-0 mt-0.5 shadow-sm"><Check className="w-3 h-3" /></div>
                     {feat}

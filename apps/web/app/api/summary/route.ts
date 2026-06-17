@@ -1,11 +1,27 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
   try {
     const session = await auth();
-    if (!session?.user || session.user.role !== "premium") {
+    if (!session?.user) {
+      return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
+    }
+
+    let isPremium = session.user.role === "premium";
+    if (!isPremium) {
+      const dbUser = await prisma.user.findUnique({
+        where: { id: session.user.id },
+        select: { role: true }
+      });
+      if (dbUser?.role === "premium") {
+        isPremium = true;
+      }
+    }
+
+    if (!isPremium) {
       return NextResponse.json({ error: "Unauthorized. Fitur SmartNote AI hanya untuk pengguna Premium." }, { status: 403 });
     }
 

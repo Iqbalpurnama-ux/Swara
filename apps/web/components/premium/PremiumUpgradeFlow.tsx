@@ -1,19 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Zap, ShieldCheck, ArrowRight, Sparkles, X, CreditCard, Loader2 } from "lucide-react"
+import { Check, Zap, ShieldCheck, ArrowRight, Sparkles, X, CreditCard, Loader2, Wallet, Building2, QrCode } from "lucide-react"
 import { useUiStore } from "@/store/uiStore"
 import { upgradeUserToPremium } from "@/app/actions/user"
 import { useRouter } from "next/navigation"
+import { useSession } from "next-auth/react"
 
 export default function PremiumUpgradeFlow() {
   const { triggerFlash } = useUiStore()
   const router = useRouter()
+  const { update } = useSession()
   
   const [showModal, setShowModal] = useState(false)
   const [selectedPlan, setSelectedPlan] = useState("")
   const [price, setPrice] = useState("")
   const [isProcessing, setIsProcessing] = useState(false)
+  const [selectedPayment, setSelectedPayment] = useState("gopay")
 
   const handleSubscribe = (plan: string, planPrice: string) => {
     setSelectedPlan(plan)
@@ -27,6 +30,8 @@ export default function PremiumUpgradeFlow() {
       await upgradeUserToPremium()
       triggerFlash("success", `Pembayaran berhasil! Akun Anda kini Premium.`)
       setShowModal(false)
+      // Update session dynamically
+      await update({ role: "premium" })
       // Reload the page to reflect the new session role
       window.location.href = "/dashboard"
     } catch (error) {
@@ -61,7 +66,7 @@ export default function PremiumUpgradeFlow() {
           </p>
           
           <div className="flex flex-col gap-4 mb-10 flex-1">
-            {['Maksimal 30 menit per sesi', 'Batas 1.000 karakter translasi/hari', '3 Preset suara natural', 'Riwayat disimpan lokal', '100% bebas iklan'].map((feat, i) => (
+            {['Maksimal 60 menit per sesi STT', 'Batas 5.000 karakter TTS/hari', 'Akses Pro AI WebSocket', 'Riwayat disimpan lokal', '100% bebas iklan'].map((feat, i) => (
               <div key={i} className="flex items-start gap-4 text-[14px] font-bold text-slate-700 dark:text-slate-300">
                 <div className="w-5 h-5 rounded-full bg-white dark:bg-slate-700 text-slate-500 dark:text-slate-400 flex items-center justify-center shrink-0 mt-0.5 shadow-sm"><Check className="w-3 h-3" /></div>
                 {feat}
@@ -177,19 +182,87 @@ export default function PremiumUpgradeFlow() {
                 </div>
               </div>
 
-              <div className="space-y-3 mb-8">
-                <p className="text-sm text-slate-500 dark:text-slate-400 text-center">
+              <div className="mb-6">
+                <p className="text-sm font-bold text-slate-700 dark:text-slate-300 mb-3">
                   Pilih metode pembayaran (Demo Mode):
                 </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <button className="border-2 border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-3 text-sm font-bold text-indigo-700 dark:text-indigo-400 flex flex-col items-center gap-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1200px-Gopay_logo.svg.png" alt="Gopay" className="h-4 object-contain brightness-0 dark:invert opacity-70" />
-                    GoPay
-                  </button>
-                  <button className="border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 rounded-xl p-3 text-sm font-bold text-slate-600 dark:text-slate-400 flex flex-col items-center gap-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/OVO_logo.svg/1200px-OVO_logo.svg.png" alt="OVO" className="h-4 object-contain brightness-0 dark:invert opacity-70" />
-                    OVO
-                  </button>
+                <div className="space-y-4 max-h-[40vh] overflow-y-auto custom-scrollbar pr-2">
+                  
+                  {/* E-Wallet */}
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">E-Wallet</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[
+                        { id: 'gopay', name: 'GoPay', icon: Wallet },
+                        { id: 'ovo', name: 'OVO', icon: Wallet },
+                        { id: 'dana', name: 'DANA', icon: Wallet },
+                        { id: 'shopeepay', name: 'ShopeePay', icon: Wallet },
+                      ].map(method => (
+                        <button 
+                          key={method.id}
+                          onClick={() => setSelectedPayment(method.id)}
+                          className={`border-2 rounded-xl p-3 text-sm font-bold flex flex-col items-center gap-2 transition-all ${
+                            selectedPayment === method.id 
+                              ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-400 shadow-sm' 
+                              : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
+                          }`}
+                        >
+                          <method.icon className={`w-5 h-5 ${selectedPayment === method.id ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400'}`} />
+                          {method.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Virtual Account */}
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Virtual Account</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[
+                        { id: 'bca', name: 'BCA VA', icon: Building2 },
+                        { id: 'mandiri', name: 'Mandiri VA', icon: Building2 },
+                        { id: 'bni', name: 'BNI VA', icon: Building2 },
+                        { id: 'bri', name: 'BRI VA', icon: Building2 },
+                      ].map(method => (
+                        <button 
+                          key={method.id}
+                          onClick={() => setSelectedPayment(method.id)}
+                          className={`border-2 rounded-xl p-3 text-sm font-bold flex flex-col items-center gap-2 transition-all ${
+                            selectedPayment === method.id 
+                              ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-400 shadow-sm' 
+                              : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
+                          }`}
+                        >
+                          <method.icon className={`w-5 h-5 ${selectedPayment === method.id ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400'}`} />
+                          {method.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Lainnya */}
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Lainnya</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[
+                        { id: 'qris', name: 'QRIS', icon: QrCode },
+                        { id: 'cc', name: 'Kartu Kredit', icon: CreditCard },
+                      ].map(method => (
+                        <button 
+                          key={method.id}
+                          onClick={() => setSelectedPayment(method.id)}
+                          className={`border-2 rounded-xl p-3 text-sm font-bold flex flex-col items-center gap-2 transition-all ${
+                            selectedPayment === method.id 
+                              ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-400 shadow-sm' 
+                              : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
+                          }`}
+                        >
+                          <method.icon className={`w-5 h-5 ${selectedPayment === method.id ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400'}`} />
+                          {method.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 

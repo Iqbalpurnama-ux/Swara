@@ -8,7 +8,7 @@ import { VoiceSelector } from "@/components/ui/VoiceSelector"
 import { VOICES, Voice } from "@/constants/voices"
 import { useTranslation } from "@/lib/i18n"
 
-export default function TextToSpeechInterface() {
+export default function TextToSpeechInterface({ isPremium = false }: { isPremium?: boolean }) {
   const { t } = useTranslation()
   const { triggerFlash } = useUiStore()
   
@@ -22,7 +22,7 @@ export default function TextToSpeechInterface() {
   const [rate, setRate] = useState(1) // 0.5 to 2.0
   const [pitch, setPitch] = useState(1) // 0 to 2
   
-  const MAX_CHARS = 500
+  const MAX_CHARS = isPremium ? Infinity : 500
 
   const quickPhrases = [
     t("tts.phrase_1"),
@@ -164,7 +164,7 @@ export default function TextToSpeechInterface() {
           <textarea
             value={text}
             onChange={(e) => {
-              if (e.target.value.length <= MAX_CHARS) setText(e.target.value)
+              if (e.target.value.length <= MAX_CHARS || isPremium) setText(e.target.value)
             }}
             placeholder={t("tts.placeholder")}
             className="flex-1 w-full bg-transparent resize-none p-8 md:p-10 text-2xl md:text-3xl text-slate-800 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600 font-medium tracking-tight outline-none leading-relaxed"
@@ -173,8 +173,8 @@ export default function TextToSpeechInterface() {
           {/* Footer of Textarea */}
           <div className="flex flex-wrap items-center justify-between p-6 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-100/50 dark:border-slate-800/50">
             <div className="flex items-center gap-4">
-              <span className={`text-sm font-bold ${text.length >= MAX_CHARS ? 'text-red-500' : 'text-slate-400 dark:text-slate-500'}`}>
-                {text.length} <span className="font-medium text-slate-400">/ {MAX_CHARS}</span>
+              <span className={`text-sm font-bold ${text.length >= MAX_CHARS && !isPremium ? 'text-red-500' : 'text-slate-400 dark:text-slate-500'}`}>
+                {text.length} <span className="font-medium text-slate-400">/ {isPremium ? "Tanpa Batas" : MAX_CHARS}</span>
               </span>
               
               {/* Visualizer when playing */}

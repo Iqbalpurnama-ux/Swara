@@ -5,6 +5,7 @@ import { MobileNav } from "@/components/layout/MobileNav"
 import { VisualFlash } from "@/components/ui/VisualFlash"
 import { OnboardingModal } from "@/components/ui/OnboardingModal"
 import { redirect } from "next/navigation"
+import { prisma } from "@/lib/prisma"
 
 export default async function DashboardLayout({
   children,
@@ -17,7 +18,17 @@ export default async function DashboardLayout({
     redirect("/login")
   }
 
-  const role = session.user.role || "regular"
+  let role = session.user.role || "regular"
+  if (session.user.id) {
+    const dbUser = await prisma.user.findUnique({
+      where: { id: session.user.id },
+      select: { role: true }
+    })
+    if (dbUser?.role) {
+      role = dbUser.role as "regular" | "premium"
+    }
+  }
+
   const defaultLanguage = (session.user as any).defaultLanguage || "id-ID"
 
   return (
@@ -32,8 +43,8 @@ export default async function DashboardLayout({
         <div className="absolute -bottom-[20%] left-[20%] w-[700px] h-[700px] rounded-full blur-[100px] bg-indigo-100/40 dark:bg-indigo-900/20"></div>
       </div>
 
-      <Sidebar role={role} />
-      <Header userName={session.user.name || undefined} language={defaultLanguage} />
+      <Sidebar role={role as "regular" | "premium"} />
+      <Header userName={session.user.name || undefined} language={defaultLanguage} role={role} />
       <VisualFlash />
       <OnboardingModal />
       

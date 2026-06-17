@@ -2,7 +2,9 @@
 
 import { useState, useRef, useEffect } from "react"
 import { useSession } from "next-auth/react"
-import { UserCircle, Mail, Shield, CheckCircle2, Zap, Camera, Calendar, Lock, Bell } from "lucide-react"
+import Link from "next/link"
+import { UserCircle, Mail, Shield, CheckCircle2, Zap, Camera, Calendar, Lock, Bell, Sparkles } from "lucide-react"
+import { getUserRole } from "@/app/actions/user"
 
 export default function ProfilePage() {
   const { data: session, status } = useSession()
@@ -11,12 +13,15 @@ export default function ProfilePage() {
   const [name, setName] = useState("")
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState("")
+  const [realRole, setRealRole] = useState("regular")
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   // Load avatar from localStorage and sync session data
   useEffect(() => {
     const saved = localStorage.getItem("swara_avatar")
     if (saved) setProfileImage(saved)
+    
+    getUserRole().then(role => setRealRole(role)).catch(console.error)
   }, [])
 
   // Sync name from session
@@ -112,21 +117,38 @@ export default function ProfilePage() {
           </div>
 
           {/* Subscription Status Card */}
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/20 rounded-full blur-[40px]"></div>
+          <div className={`p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden ${
+            realRole === "premium" 
+              ? "bg-gradient-to-br from-indigo-600 to-blue-800 dark:from-indigo-900 dark:to-blue-900" 
+              : "bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900"
+          }`}>
+            <div className={`absolute top-0 right-0 w-40 h-40 rounded-full blur-[40px] ${realRole === "premium" ? "bg-white/20" : "bg-blue-500/20"}`}></div>
             
-            <div className="flex items-center gap-2 mb-6 text-blue-400">
+            <div className={`flex items-center gap-2 mb-6 ${realRole === "premium" ? "text-indigo-200" : "text-blue-400"}`}>
               <Shield className="w-5 h-5" />
               <span className="text-sm font-bold tracking-widest uppercase">Status Akun</span>
             </div>
             
-            <h2 className="text-3xl font-black mb-2">Regular Plan</h2>
-            <p className="text-slate-400 text-sm font-medium mb-8">Anda menggunakan paket gratis. Terbatas 30 menit/sesi STT.</p>
-            
-            <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 group">
-              <Zap className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Upgrade ke Premium
-            </button>
+            {realRole === "premium" ? (
+              <>
+                <h2 className="text-3xl font-black mb-2 flex items-center gap-2">
+                  <Sparkles className="w-8 h-8 text-yellow-300" /> Premium Plan
+                </h2>
+                <p className="text-indigo-100 text-sm font-medium mb-8">Anda menikmati akses tanpa batas ke semua fitur premium.</p>
+                <button disabled className="w-full bg-white/20 text-white font-bold px-6 py-4 rounded-xl cursor-default flex items-center justify-center gap-2">
+                  Berlangganan Aktif
+                </button>
+              </>
+            ) : (
+              <>
+                <h2 className="text-3xl font-black mb-2">Regular Plan</h2>
+                <p className="text-slate-400 text-sm font-medium mb-8">Anda menggunakan paket gratis. Terbatas 60 menit/sesi STT.</p>
+                <Link href="/premium" className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 group">
+                  <Zap className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  Upgrade ke Premium
+                </Link>
+              </>
+            )}
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { Bell, Globe2, UserCircle, LogOut, Settings, ChevronDown, CheckCircle2, AlertCircle, Info } from "lucide-react"
+import { Bell, Globe2, UserCircle, LogOut, Settings, ChevronDown, CheckCircle2, AlertCircle, Info, Sparkles } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { signOut } from "next-auth/react"
@@ -11,9 +11,10 @@ import { useTranslation } from "@/lib/i18n"
 interface HeaderProps {
   userName?: string
   language?: string
+  role?: string
 }
 
-export function Header({ userName, language = "id-ID" }: HeaderProps) {
+export function Header({ userName, language = "id-ID", role = "regular" }: HeaderProps) {
   const { t } = useTranslation()
   const [showProfileMenu, setShowProfileMenu] = useState(false)
   const [showNotifMenu, setShowNotifMenu] = useState(false)
@@ -186,8 +187,19 @@ export function Header({ userName, language = "id-ID" }: HeaderProps) {
           {showProfileMenu && (
             <div className="absolute top-full right-0 mt-2 w-64 bg-white dark:bg-slate-800 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-100 dark:border-slate-700 py-3 z-50 animate-in fade-in slide-in-from-top-2">
               <div className="px-5 py-2 mb-2 border-b border-gray-100 dark:border-slate-700">
-                <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 w-fit px-2 py-1 rounded-md mb-1 border border-emerald-100 dark:border-emerald-800/50">Regular Plan</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Batas 30 menit tersisa</div>
+                {role === "premium" ? (
+                  <>
+                    <div className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 w-fit px-2 py-1 rounded-md mb-1 border border-blue-100 dark:border-blue-800/50 flex items-center gap-1">
+                      <Sparkles className="w-3 h-3" /> Premium Plan
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Akses tanpa batas</div>
+                  </>
+                ) : (
+                  <>
+                    <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 w-fit px-2 py-1 rounded-md mb-1 border border-emerald-100 dark:border-emerald-800/50">Regular Plan</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Batas 30 menit tersisa</div>
+                  </>
+                )}
               </div>
               <div className="flex flex-col">
                 <Link href="/profile" className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-semibold transition-colors w-full text-left">

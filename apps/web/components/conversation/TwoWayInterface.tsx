@@ -11,20 +11,33 @@ import { useUiStore } from "@/store/uiStore"
 import { saveNotification } from "@/lib/notifications"
 import { useTranslation } from "@/lib/i18n"
 import { saveHistory } from "@/app/actions/history"
+import { useSpeechRecognition } from "@/hooks/useSpeechRecognition"
 
-export default function TwoWayInterface() {
+export default function TwoWayInterface({ isPremium = false }: { isPremium?: boolean }) {
   const { t } = useTranslation()
   const { triggerFlash, addNotification } = useUiStore()
   const { phrases } = useQuickPhrases()
 
   // STT State (Top Panel)
-  const [isListening, setIsListening] = useState(false)
   const [partnerMessages, setPartnerMessages] = useState<Array<{ id: number; original: string; translated: string; isPlaying: boolean }>>([])
-  const [interimText, setInterimText] = useState("")
   const [autoPlayTranslation, setAutoPlayTranslation] = useState(true)
-  const recognitionRef = useRef<any>(null)
   const partnerAreaRef = useRef<HTMLDivElement>(null)
   const isPlayingTranslationRef = useRef(false)
+
+  // Premium WS Hook
+  const {
+    isRecording: isWSRecording,
+    interimTranscript: wsInterimTranscript,
+    setLanguage: setWSLanguage,
+    startRecording: startWSRecording,
+    stopRecording: stopWSRecording
+  } = useSpeechRecognition({
+    onResult: (text) => handleFinalTranscription(text)
+  });
+
+  // Determine actual recording state and interim text
+  const isCurrentlyListening = isWSRecording;
+  const currentInterimText = wsInterimTranscript;
 
   // TTS State (Bottom Panel)
   const [myText, setMyText] = useState("")
@@ -44,7 +57,7 @@ export default function TwoWayInterface() {
   const enableTranslationRef = useRef(enableTranslation)
   const partnerLangRef = useRef(partnerLang)
   const myLangRef = useRef(myLang)
-  const isListeningRef = useRef(isListening)
+  const isListeningRef = useRef(isWSRecording)
   const settingsRef = useRef({ autoPunctuation: true })
 
   // Load settings
@@ -73,12 +86,13 @@ export default function TwoWayInterface() {
   useEffect(() => {
     const defaultMyVoice = VOICES.find(v => v.lang === partnerLang)?.name || ""
     setMyVoice(defaultMyVoice)
-  }, [partnerLang])
+    setWSLanguage(partnerLang)
+  }, [partnerLang, setWSLanguage])
 
   useEffect(() => { enableTranslationRef.current = enableTranslation }, [enableTranslation])
   useEffect(() => { partnerLangRef.current = partnerLang }, [partnerLang])
   useEffect(() => { myLangRef.current = myLang }, [myLang])
-  useEffect(() => { isListeningRef.current = isListening }, [isListening])
+  useEffect(() => { isListeningRef.current = isWSRecording }, [isWSRecording])
   const autoPlayTranslationRef = useRef(autoPlayTranslation)
   useEffect(() => { autoPlayTranslationRef.current = autoPlayTranslation }, [autoPlayTranslation])
 
@@ -110,116 +124,37 @@ export default function TwoWayInterface() {
     return ""
   }, [])
 
-  // Initialize STT (Partner)
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
-      if (SpeechRecognition) {
-        recognitionRef.current = new SpeechRecognition()
-        recognitionRef.current.continuous = true
-        recognitionRef.current.interimResults = true
-        recognitionRef.current.lang = partnerLang
-        
-        recognitionRef.current.onresult = (event: any) => {
-          let final = ""
-          let interim = ""
-          for (let i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-              let text = event.results[i][0].transcript.trim()
-              if (settingsRef.current.autoPunctuation && text.length > 0) {
-                text = text.charAt(0).toUpperCase() + text.slice(1)
-                if (!/[.!?]$/.test(text)) text += "."
-              }
-              final += text + " "
-            } else {
-              interim += event.results[i][0].transcript
-            }
-          }
-          
-          setInterimText(interim)
-
-          if (final) {
-            const finalTrimmed = final.trim()
-            const msgId = Date.now()
-            
-            // Add initial message (untranslated)
-            setPartnerMessages(prev => [...prev, { id: msgId, original: finalTrimmed, translated: "Menerjemahkan...", isPlaying: false }])
-            
-            // Translate if enabled
-            if (enableTranslationRef.current && partnerLangRef.current !== myLangRef.current) {
-              translateText(finalTrimmed, partnerLangRef.current, myLangRef.current).then(translated => {
-                if (translated) {
-                  setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, translated } : msg))
-                  
-                  // Add to history log
-                  setConversationLog(prev => [...prev, {
-                    speaker: "Lawan Bicara",
-                    text: finalTrimmed,
-                    translation: translated,
-                    time: new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" })
-                  }])
-                  
-                  // Auto-play translation
-                  if (autoPlayTranslationRef.current) {
-                    playTranslation(translated, msgId)
-                  }
-                }
-              })
-            } else {
-               // No translation needed, just add to log
-               setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, translated: "" } : msg))
-               setConversationLog(prev => [...prev, {
-                  speaker: "Lawan Bicara",
-                  text: finalTrimmed,
-                  time: new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" })
-               }])
-            }
+  const handleFinalTranscription = useCallback((finalTrimmed: string) => {
+    if (!finalTrimmed) return;
+    const msgId = Date.now()
+    
+    setPartnerMessages(prev => [...prev, { id: msgId, original: finalTrimmed, translated: "Menerjemahkan...", isPlaying: false }])
+    
+    if (enableTranslationRef.current && partnerLangRef.current !== myLangRef.current) {
+      translateText(finalTrimmed, partnerLangRef.current, myLangRef.current).then(translated => {
+        if (translated) {
+          setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, translated } : msg))
+          setConversationLog(prev => [...prev, {
+            speaker: "Lawan Bicara",
+            text: finalTrimmed,
+            translation: translated,
+            time: new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" })
+          }])
+          if (autoPlayTranslationRef.current) {
+            playTranslation(translated, msgId)
           }
         }
-
-        recognitionRef.current.onend = () => {
-          setInterimText("")
-          // Auto-restart if still listening and not currently playing translation
-          if (isListeningRef.current && !isPlayingTranslationRef.current) {
-            try { recognitionRef.current?.start() } catch (e) {}
-          }
-        }
-
-        recognitionRef.current.onerror = (event: any) => {
-          if (event.error !== "no-speech") {
-            setIsListening(false)
-            let errMsg = "Koneksi mikrofon terputus"
-            if (event.error === "not-allowed") errMsg = "Izin mikrofon ditolak (Periksa pengaturan browser)"
-            if (event.error === "network") errMsg = "Tidak ada koneksi internet"
-            // Ignore error if it's aborted because we stopped it for TTS
-            if (event.error !== "aborted") {
-              addNotification("error", errMsg)
-            }
-          }
-        }
-      }
+      })
+    } else {
+       setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, translated: "" } : msg))
+       setConversationLog(prev => [...prev, {
+          speaker: "Lawan Bicara",
+          text: finalTrimmed,
+          time: new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" })
+       }])
     }
+  }, [translateText]);
 
-    // Cleanup: Stop recognition when component unmounts
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop()
-      }
-    }
-  }, [partnerLang, translateText, addNotification])
-
-  // Update recognition language when changed
-  useEffect(() => {
-    if (recognitionRef.current) {
-      recognitionRef.current.lang = partnerLang
-      if (isListening) {
-        recognitionRef.current.stop()
-        setTimeout(() => {
-          try { recognitionRef.current?.start() } catch (e) {}
-        }, 100)
-      }
-    }
-  }, [partnerLang])
 
   // Auto-scroll Partner Text
   useEffect(() => {
@@ -229,15 +164,10 @@ export default function TwoWayInterface() {
   }, [partnerMessages])
 
   const toggleListening = () => {
-    if (isListening) {
-      recognitionRef.current?.stop()
-      setIsListening(false)
-      setInterimText("")
+    if (isWSRecording) {
+      stopWSRecording();
     } else {
-      try {
-        recognitionRef.current?.start()
-        setIsListening(true)
-      } catch (e) {}
+      startWSRecording();
     }
   }
 
@@ -253,9 +183,7 @@ export default function TwoWayInterface() {
     isPlayingTranslationRef.current = true
     
     // Temporarily stop STT to prevent feedback loop
-    if (isListeningRef.current) {
-      recognitionRef.current?.stop()
-    }
+    if (isWSRecording) stopWSRecording();
 
     setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, isPlaying: true } : { ...msg, isPlaying: false }))
 
@@ -286,17 +214,13 @@ export default function TwoWayInterface() {
         setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, isPlaying: false } : msg))
         URL.revokeObjectURL(url)
         // Resume STT
-        if (isListeningRef.current) {
-          setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-        }
+        if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
       }
       
       audio.onerror = () => {
         isPlayingTranslationRef.current = false
         setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, isPlaying: false } : msg))
-        if (isListeningRef.current) {
-          setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-        }
+        if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
       }
 
       await audio.play()
@@ -304,9 +228,7 @@ export default function TwoWayInterface() {
       console.error(e)
       isPlayingTranslationRef.current = false
       setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, isPlaying: false } : msg))
-      if (isListeningRef.current) {
-        setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-      }
+      if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
     }
   }
 
@@ -317,9 +239,7 @@ export default function TwoWayInterface() {
     }
     isPlayingTranslationRef.current = false
     setPartnerMessages(prev => prev.map(msg => msg.id === msgId ? { ...msg, isPlaying: false } : msg))
-    if (isListeningRef.current) {
-      setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-    }
+    if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
   }
 
   const handleSendAndSpeak = async () => {
@@ -328,9 +248,7 @@ export default function TwoWayInterface() {
     setIsPlaying(true)
 
     // Stop listening temporarily to avoid recording our own TTS
-    if (isListeningRef.current) {
-      recognitionRef.current?.stop()
-    }
+    if (isWSRecording) stopWSRecording();
 
     let textToSpeak = myText.trim()
     if (settingsRef.current.autoPunctuation && textToSpeak.length > 0) {
@@ -392,25 +310,19 @@ export default function TwoWayInterface() {
         setMyText("")
         URL.revokeObjectURL(url)
         // Resume listening
-        if (isListeningRef.current) {
-          setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-        }
+        if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
       }
 
       audio.onerror = () => {
         setIsPlaying(false)
-        if (isListeningRef.current) {
-          setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-        }
+        if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
       }
 
       await audio.play()
     } catch (e) {
       console.error(e)
       setIsPlaying(false)
-      if (isListeningRef.current) {
-        setTimeout(() => { try { recognitionRef.current?.start() } catch (e) {} }, 100)
-      }
+      if (isListeningRef.current) setTimeout(() => { try { startWSRecording() } catch (e) {} }, 100);
     }
   }
 
@@ -439,7 +351,7 @@ export default function TwoWayInterface() {
     
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [isListening, myText, isPlaying]) // dependencies for correct state inside handlers
+  }, [isCurrentlyListening, myText, isPlaying]) // dependencies for correct state inside handlers
 
   const handleSaveSession = async () => {
     if (conversationLog.length === 0) {
@@ -499,15 +411,15 @@ export default function TwoWayInterface() {
       
       {/* Top Panel: Lawan Bicara (STT) */}
       <div 
-        className="flex flex-col bg-blue-50/90 dark:bg-slate-900/90 backdrop-blur-xl md:rounded-t-[3rem] border-b-4 border-blue-600 dark:border-blue-500 relative z-30 transition-all duration-300"
+        className="flex flex-col bg-blue-50/90 dark:bg-slate-900/90 backdrop-blur-xl md:rounded-t-[3rem] border-b-4 border-blue-600 dark:border-blue-500 relative z-30 focus-within:z-50 transition-all duration-300"
         style={{ flex: `${topRatio} 0 0` }}
       >
         <div className="w-full px-4 pt-4 pb-2 z-40 flex-shrink-0">
           <div className="flex flex-wrap items-center justify-between gap-3 md:gap-6">
             <div className="flex items-center flex-wrap gap-2 shrink-0">
               <div className={`hidden md:flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md`}>
-                <div className={`w-2 h-2 rounded-full ${isListening ? 'bg-white animate-pulse' : 'bg-blue-300'}`}></div>
-                {t("conv.partner")}
+                <div className={`w-2 h-2 rounded-full ${isCurrentlyListening ? 'bg-white animate-pulse' : 'bg-blue-300'}`}></div>
+                {t("conv.partner")} {isPremium && <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded-md uppercase tracking-wider ml-1">Pro</span>}
               </div>
               <LanguageSelector value={partnerLang} onChange={setPartnerLang} align="left" />
               <div className="h-4 w-px bg-slate-300 dark:bg-slate-700 mx-1 shrink-0"></div>
@@ -544,26 +456,26 @@ export default function TwoWayInterface() {
             </button>
             <button 
               onClick={toggleListening}
-              aria-label={isListening ? "Berhenti mendengarkan lawan bicara" : "Mulai mendengarkan lawan bicara"}
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-md ${isListening ? 'bg-red-500 text-white' : 'bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}
+              aria-label={isCurrentlyListening ? "Berhenti mendengarkan lawan bicara" : "Mulai mendengarkan lawan bicara"}
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-md ${isCurrentlyListening ? 'bg-red-500 text-white' : 'bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400'}`}
             >
-              {isListening ? <StopCircle className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+              {isCurrentlyListening ? <StopCircle className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
             </button>
             </div>
           </div>
         </div>
 
         <div ref={partnerAreaRef} className="flex-1 overflow-y-auto p-4 md:p-8 flex flex-col justify-end custom-scrollbar md:rounded-t-[3rem]" aria-live="polite" role="region" aria-label="Teks Lawan Bicara">
-          {partnerMessages.length === 0 && !isListening && !interimText ? (
+          {partnerMessages.length === 0 && !isCurrentlyListening && !currentInterimText ? (
              <div className="text-center text-blue-300 dark:text-slate-500 font-medium my-auto">{t("conv.press_mic")}</div>
           ) : (
             <div>
               <div className="text-3xl md:text-4xl text-slate-800 dark:text-white font-medium leading-relaxed tracking-tight">
                 {partnerMessages.map(msg => msg.original).join(" ")}
-                {interimText && (
-                  <span className="text-slate-400 dark:text-slate-500 ml-2 animate-pulse">{interimText}</span>
+                {currentInterimText && (
+                  <span className="text-slate-400 dark:text-slate-500 ml-2 animate-pulse">{currentInterimText}</span>
                 )}
-                {isListening && !interimText && <span className="inline-block w-2 h-6 bg-blue-500 animate-pulse ml-2 align-middle"></span>}
+                {isCurrentlyListening && !currentInterimText && <span className="inline-block w-2 h-6 bg-blue-500 animate-pulse ml-2 align-middle"></span>}
               </div>
               
               {enableTranslation && partnerMessages.some(m => m.translated) && (
@@ -613,7 +525,7 @@ export default function TwoWayInterface() {
 
       {/* Bottom Panel: Kamu (TTS) */}
       <div 
-        className="flex flex-col bg-white dark:bg-slate-800 md:rounded-b-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.08)] relative z-20 border border-slate-100 dark:border-slate-700/50"
+        className="flex flex-col bg-white dark:bg-slate-800 md:rounded-b-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.08)] relative z-20 focus-within:z-50 border border-slate-100 dark:border-slate-700/50"
         style={{ flex: `${100 - topRatio} 0 0` }}
       >
         <div className="w-full px-4 pt-4 pb-2 z-40 flex-shrink-0">

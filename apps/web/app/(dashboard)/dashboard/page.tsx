@@ -1,4 +1,5 @@
 import { auth } from "@/lib/auth"
+import { prisma } from "@/lib/prisma"
 import { QuickAccessCards } from "@/components/dashboard/QuickAccessCards"
 import { RecentHistory } from "@/components/dashboard/RecentHistory"
 import { UsageQuota } from "@/components/dashboard/UsageQuota"
@@ -6,7 +7,17 @@ import { DashboardHeader } from "@/components/dashboard/DashboardHeader"
 
 export default async function DashboardPage() {
   const session = await auth()
-  const role = session?.user?.role || "regular"
+  let role = session?.user?.role || "regular"
+  
+  if (session?.user?.id) {
+    const dbUser = await prisma.user.findUnique({
+      where: { id: session.user.id },
+      select: { role: true }
+    })
+    if (dbUser?.role) {
+      role = dbUser.role
+    }
+  }
 
   return (
     <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-8">

@@ -18,7 +18,7 @@ export function UsageQuota({ role = "regular" }: UsageQuotaProps) {
   const sttLimit = 60 // 60 menit per bulan
   
   const [translationUsed, setTranslationUsed] = useState(0)
-  const translationLimit = 10000 // 10.000 karakter per bulan
+  const translationLimit = 5000 // 5.000 karakter
 
   useEffect(() => {
     async function loadStats() {
@@ -95,10 +95,10 @@ export function UsageQuota({ role = "regular" }: UsageQuotaProps) {
         </div>
       </div>
 
-      <button className="w-full mt-8 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-sm shadow-blue-200 dark:shadow-none flex items-center justify-center gap-2 text-sm">
+      <Link href="/premium" className="w-full mt-8 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-sm shadow-blue-200 dark:shadow-none flex items-center justify-center gap-2 text-sm">
         <Zap className="w-4 h-4 text-blue-200" />
         {t("quota.upgrade")}
-      </button>
+      </Link>
     </div>
   )
 }

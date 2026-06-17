@@ -40,10 +40,10 @@ export function VisualFlash() {
         <div className="fixed inset-0 z-[100] pointer-events-none flex items-center justify-center">
           {/* Screen Glow */}
           <div 
-            className={`absolute inset-0 bg-gradient-to-b ${getFlashConfig(flashType).glow} to-transparent ${
-              reducedMotion ? '' : 'animate-[fadeInOut_2.5s_ease-in-out]'
-            }`}
-            style={{ animationDuration: `${notificationDuration}ms` }}
+            className={`absolute inset-0 bg-gradient-to-b ${getFlashConfig(flashType).glow} to-transparent`}
+            style={{ 
+              animation: reducedMotion ? 'none' : `fadeInOut ${notificationDuration}ms ease-in-out forwards`
+            }}
           />
 
           {/* Center Popup */}
@@ -66,12 +66,12 @@ export function VisualFlash() {
               </p>
             )}
 
-            {/* Progress bar countdown */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-100 dark:bg-slate-700 overflow-hidden rounded-b-[2rem]">
-              <div className={`h-full ${getFlashConfig(flashType).bg} ${
-                reducedMotion ? 'w-0' : 'animate-[shrink_2.5s_linear_forwards]'
-              }`}
-              style={{ animationDuration: `${notificationDuration}ms` }}
+              <div className={`h-full ${getFlashConfig(flashType).bg}`}
+              style={{ 
+                width: reducedMotion ? '0' : '100%',
+                animation: reducedMotion ? 'none' : `shrink ${notificationDuration}ms linear forwards`
+              }}
               ></div>
             </div>
           </div>
@@ -103,10 +103,11 @@ export function VisualFlash() {
 
               {/* Toast progress bar */}
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-100 dark:bg-slate-700">
-                <div className={`h-full ${config.bg} ${
-                  reducedMotion ? 'w-0' : 'animate-[shrink_2.5s_linear_forwards]'
-                }`}
-                style={{ animationDuration: `${notificationDuration}ms` }}
+                <div className={`h-full ${config.bg}`}
+                style={{ 
+                  width: reducedMotion ? '0' : '100%',
+                  animation: reducedMotion ? 'none' : `shrink ${notificationDuration}ms linear forwards`
+                }}
                 ></div>
               </div>
             </div>

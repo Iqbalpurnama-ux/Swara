@@ -7,6 +7,7 @@ import { io, Socket } from "socket.io-client"
 interface UseSpeechRecognitionOptions {
   onEnd?: () => void;
   onError?: (error: string) => void;
+  onResult?: (text: string) => void;
 }
 
 export function useSpeechRecognition(options?: UseSpeechRecognitionOptions) {
@@ -56,6 +57,7 @@ export function useSpeechRecognition(options?: UseSpeechRecognitionOptions) {
         }
         setFinalTranscript(prev => prev + text + " ")
         setInterimTranscript("")
+        options?.onResult?.(text)
       } else {
         setInterimTranscript(data.transcript)
       }

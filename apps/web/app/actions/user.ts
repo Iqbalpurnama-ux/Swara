@@ -33,3 +33,13 @@ export async function upgradeUserToPremium() {
 
   return { success: true }
 }
+
+export async function getUserRole() {
+  const session = await auth()
+  if (!session?.user?.id) return "regular"
+  const dbUser = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { role: true }
+  })
+  return dbUser?.role || "regular"
+}
