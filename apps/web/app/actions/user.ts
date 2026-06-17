@@ -2,6 +2,7 @@
 
 import { prisma } from "@/lib/prisma"
 import { auth } from "@/lib/auth"
+import { unstable_noStore as noStore } from "next/cache"
 
 export async function upgradeUserToPremium() {
   const session = await auth()
@@ -35,6 +36,7 @@ export async function upgradeUserToPremium() {
 }
 
 export async function getUserRole() {
+  noStore()
   const session = await auth()
   if (!session?.user?.id) return "regular"
   const dbUser = await prisma.user.findUnique({

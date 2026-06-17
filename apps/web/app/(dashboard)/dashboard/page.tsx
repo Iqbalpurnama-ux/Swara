@@ -7,7 +7,7 @@ import { DashboardHeader } from "@/components/dashboard/DashboardHeader"
 
 export default async function DashboardPage() {
   const session = await auth()
-  let role = session?.user?.role || "regular"
+  let role: string = session?.user?.role || "regular"
   
   if (session?.user?.id) {
     const dbUser = await prisma.user.findUnique({
