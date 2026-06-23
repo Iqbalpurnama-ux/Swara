@@ -18,11 +18,11 @@ export const VOICES: Voice[] = [
   { name: "en-US-Chirp3-HD-Achird", label: "Pria 1", lang: "en-US", gender: "MALE" },
   { name: "en-US-Chirp3-HD-Algenib", label: "Pria 2", lang: "en-US", gender: "MALE" },
 
-  // Arabic (SA)
-  { name: "ar-XA-Chirp3-HD-Achernar", label: "Wanita 1", lang: "ar-SA", gender: "FEMALE" },
-  { name: "ar-XA-Chirp3-HD-Aoede", label: "Wanita 2", lang: "ar-SA", gender: "FEMALE" },
-  { name: "ar-XA-Chirp3-HD-Achird", label: "Pria 1", lang: "ar-SA", gender: "MALE" },
-  { name: "ar-XA-Chirp3-HD-Algenib", label: "Pria 2", lang: "ar-SA", gender: "MALE" },
+  // Arabic
+  { name: "ar-XA-Chirp3-HD-Achernar", label: "Wanita 1", lang: "ar-XA", gender: "FEMALE" },
+  { name: "ar-XA-Chirp3-HD-Aoede", label: "Wanita 2", lang: "ar-XA", gender: "FEMALE" },
+  { name: "ar-XA-Chirp3-HD-Achird", label: "Pria 1", lang: "ar-XA", gender: "MALE" },
+  { name: "ar-XA-Chirp3-HD-Algenib", label: "Pria 2", lang: "ar-XA", gender: "MALE" },
 
   // Chinese (Mandarin, CN)
   { name: "cmn-CN-Chirp3-HD-Achernar", label: "Wanita 1", lang: "zh-CN", gender: "FEMALE" },
