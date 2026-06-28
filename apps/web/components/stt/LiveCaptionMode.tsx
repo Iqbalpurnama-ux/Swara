@@ -1,9 +1,11 @@
 "use client"
 
 import { useState, useEffect, useRef, useCallback } from "react"
-import { Mic, Maximize, Minimize, Plus, Minus, Eye, X } from "lucide-react"
+import { createPortal } from "react-dom"
+import { Mic, Maximize, Minimize, Plus, Minus, Eye, X, Save, Loader2 } from "lucide-react"
 import { useUiStore } from "@/store/uiStore"
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition"
+import { saveHistory } from "@/app/actions/history"
 
 export default function LiveCaptionMode() {
   const { addNotification } = useUiStore()
@@ -12,6 +14,7 @@ export default function LiveCaptionMode() {
   const [highContrast, setHighContrast] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showControls, setShowControls] = useState(true)
+  const [isSaving, setIsSaving] = useState(false)
   
   const {
     isRecording,
@@ -93,6 +96,24 @@ export default function LiveCaptionMode() {
     resetControlsTimer()
   }
 
+  const handleSave = async () => {
+    if (!transcript.trim()) return
+    setIsSaving(true)
+    try {
+      await saveHistory({
+        type: "stt",
+        originalText: transcript,
+        label: "Live Caption",
+        sourceLanguageCode: language,
+      })
+      addNotification("success", "Transkrip berhasil disimpan ke riwayat")
+    } catch (e) {
+      addNotification("error", "Gagal menyimpan transkrip")
+    } finally {
+      setIsSaving(false)
+    }
+  }
+
   // Keyboard Shortcuts
   useEffect(() => {
     if (!isActive) return
@@ -128,7 +149,7 @@ export default function LiveCaptionMode() {
     )
   }
 
-  return (
+  const content = (
     <div 
       ref={containerRef}
       className={`fixed inset-0 flex flex-col select-none transition-colors duration-300 ${
@@ -136,7 +157,7 @@ export default function LiveCaptionMode() {
           ? "bg-black" 
           : "bg-slate-50 dark:bg-[#0F172A]"
       }`}
-      style={{ zIndex: 9999 }}
+      style={{ zIndex: 99999 }}
       onMouseMove={resetControlsTimer}
       onTouchStart={resetControlsTimer}
     >
@@ -197,15 +218,10 @@ export default function LiveCaptionMode() {
         <div className="absolute top-0 inset-x-0 p-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div 
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
-              style={{ 
-                backgroundColor: isRecording ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.1)',
-                color: isRecording ? '#F87171' : 'rgba(255,255,255,0.6)'
-              }}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${isRecording ? 'bg-red-500/20 text-red-500' : 'bg-slate-200/80 dark:bg-white/10 text-slate-500 dark:text-white/60'}`}
             >
               <div 
-                className={`w-2 h-2 rounded-full ${isRecording ? 'animate-pulse' : ''}`}
-                style={{ backgroundColor: isRecording ? '#EF4444' : 'rgba(255,255,255,0.4)' }}
+                className={`w-2 h-2 rounded-full ${isRecording ? 'animate-pulse bg-red-500' : 'bg-slate-400 dark:bg-white/40'}`}
               ></div>
               {isRecording ? 'LIVE' : 'PAUSED'}
             </div>
@@ -228,34 +244,40 @@ export default function LiveCaptionMode() {
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1 rounded-full px-1 py-1" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
-              <button onClick={() => changeFontSize(-4)} className="w-9 h-9 rounded-full flex items-center justify-center transition-colors" style={{ color: 'rgba(255,255,255,0.7)' }} aria-label="Perkecil teks">
+            <div className="flex items-center gap-1 rounded-full px-1 py-1 bg-slate-200/50 dark:bg-white/10">
+              <button onClick={() => changeFontSize(-4)} className="w-9 h-9 rounded-full flex items-center justify-center transition-colors hover:bg-slate-300/50 dark:hover:bg-white/20 text-slate-600 dark:text-white/70" aria-label="Perkecil teks">
                 <Minus className="w-4 h-4" />
               </button>
-              <span className="text-xs font-bold min-w-[36px] text-center" style={{ color: 'rgba(255,255,255,0.6)' }} aria-label={`Ukuran teks ${fontSize} piksel`}>{fontSize}px</span>
-              <button onClick={() => changeFontSize(4)} className="w-9 h-9 rounded-full flex items-center justify-center transition-colors" style={{ color: 'rgba(255,255,255,0.7)' }} aria-label="Perbesar teks">
+              <span className="text-xs font-bold min-w-[36px] text-center text-slate-600 dark:text-white/60" aria-label={`Ukuran teks ${fontSize} piksel`}>{fontSize}px</span>
+              <button onClick={() => changeFontSize(4)} className="w-9 h-9 rounded-full flex items-center justify-center transition-colors hover:bg-slate-300/50 dark:hover:bg-white/20 text-slate-600 dark:text-white/70" aria-label="Perbesar teks">
                 <Plus className="w-4 h-4" />
               </button>
             </div>
 
             <button 
               onClick={() => setHighContrast(!highContrast)}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-              style={{ 
-                backgroundColor: highContrast ? 'white' : 'rgba(255,255,255,0.1)',
-                color: highContrast ? 'black' : 'rgba(255,255,255,0.7)'
-              }}
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${highContrast ? 'bg-slate-800 text-white dark:bg-white dark:text-black' : 'bg-slate-200/50 dark:bg-white/10 text-slate-600 dark:text-white/70 hover:bg-slate-300/50 dark:hover:bg-white/20'}`}
               title="High Contrast"
               aria-label="Mode Kontras Tinggi"
             >
               <Eye className="w-4 h-4" />
             </button>
 
-            <button onClick={toggleFullscreen} className="w-10 h-10 rounded-full flex items-center justify-center transition-colors" style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }} aria-label={isFullscreen ? "Keluar Layar Penuh" : "Layar Penuh"}>
+            <button onClick={toggleFullscreen} className="w-10 h-10 rounded-full flex items-center justify-center transition-colors bg-slate-200/50 dark:bg-white/10 text-slate-600 dark:text-white/70 hover:bg-slate-300/50 dark:hover:bg-white/20" aria-label={isFullscreen ? "Keluar Layar Penuh" : "Layar Penuh"}>
               {isFullscreen ? <Minimize className="w-4 h-4" /> : <Maximize className="w-4 h-4" />}
             </button>
 
-            <button onClick={exitCaptionMode} className="w-10 h-10 rounded-full flex items-center justify-center transition-colors" style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }} aria-label="Tutup Live Caption">
+            <button 
+              onClick={handleSave} 
+              disabled={isSaving || !transcript.trim()}
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-colors disabled:opacity-50 bg-slate-200/50 dark:bg-white/10 text-slate-600 dark:text-white/70 hover:bg-slate-300/50 dark:hover:bg-white/20" 
+              aria-label="Simpan Transkrip"
+              title="Simpan ke Riwayat"
+            >
+              {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+            </button>
+
+            <button onClick={exitCaptionMode} className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:bg-red-100 dark:hover:bg-red-500/20 hover:text-red-500 dark:hover:text-red-400 bg-slate-200/50 dark:bg-white/10 text-slate-600 dark:text-white/70" aria-label="Tutup Live Caption" title="Keluar">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -289,4 +311,10 @@ export default function LiveCaptionMode() {
       </div>
     </div>
   )
+
+  if (typeof document !== 'undefined') {
+    return createPortal(content, document.body)
+  }
+  
+  return content
 }

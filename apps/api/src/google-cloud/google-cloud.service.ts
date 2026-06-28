@@ -17,7 +17,7 @@ export class GoogleCloudService {
         this.speechClient = new speech.SpeechClient({ credentials });
         this.ttsClient = new textToSpeech.TextToSpeechClient({ credentials });
       } else {
-        const keyFilename = path.resolve(__dirname, '../../gcp-key.json');
+        const keyFilename = path.resolve(process.cwd(), 'gcp-key.json');
         this.logger.log(`Initializing GCP Clients using key: ${keyFilename}`);
         this.speechClient = new speech.SpeechClient({ keyFilename });
         this.ttsClient = new textToSpeech.TextToSpeechClient({ keyFilename });
